@@ -47,7 +47,7 @@
 
     /* ─── Hero ─────────────────────────────────────────────────────────── */
     #hero {
-      padding: 120px 0 100px;
+      padding: 120px 0 48px;
       border-bottom: 1px solid var(--card-border);
     }
 
@@ -93,12 +93,13 @@
       color: var(--text);
       font-size: 14px;
       font-weight: 500;
-      transition: border-color 0.2s, color 0.2s;
+      transition: border-color 0.25s, color 0.25s, box-shadow 0.25s;
     }
 
     .hero-link:hover {
       border-color: var(--orange);
       color: var(--orange);
+      box-shadow: 0 0 8px rgba(247,147,26,0.6), 0 0 20px rgba(247,147,26,0.3), 0 0 40px rgba(247,147,26,0.12);
     }
 
     .hero-link svg {
@@ -128,6 +129,7 @@
     /* ─── Numbers ──────────────────────────────────────────────────────── */
     #numbers {
       border-bottom: 1px solid var(--card-border);
+      padding: 40px 0;
     }
 
     .numbers-grid {
@@ -173,6 +175,7 @@
     /* ─── Case Studies ─────────────────────────────────────────────────── */
     #case-studies {
       border-bottom: 1px solid var(--card-border);
+      padding-top: 48px;
     }
 
     .cards-grid {
@@ -199,13 +202,14 @@
       border: 1px solid var(--card-border);
       border-radius: 10px;
       overflow: hidden;
-      transition: border-color 0.2s;
+      transition: border-color 0.25s, box-shadow 0.25s;
       cursor: pointer;
       position: relative;
     }
 
     .conf-card:hover {
-      border-color: #333;
+      border-color: var(--orange);
+      box-shadow: 0 0 8px rgba(247,147,26,0.6), 0 0 24px rgba(247,147,26,0.3), 0 0 48px rgba(247,147,26,0.12);
     }
 
     .conf-card.is-open {
