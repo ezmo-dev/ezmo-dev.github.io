@@ -263,6 +263,12 @@
       letter-spacing: -0.5px;
       color: var(--text);
       margin-bottom: 12px;
+      transition: color 0.25s, text-shadow 0.25s;
+    }
+
+    .conf-card:hover .card-title {
+      color: var(--orange);
+      text-shadow: 0 0 8px rgba(247,147,26,0.5), 0 0 20px rgba(247,147,26,0.2);
     }
 
     .card-stats {
@@ -547,10 +553,11 @@
       fill: currentColor;
     }
 
-    .device-placeholder-note {
+    .device-coming-soon {
       font-size: 11px;
-      color: #444;
+      color: var(--muted);
       font-style: italic;
+      letter-spacing: 0.5px;
     }
 
     /* ─── Contact ──────────────────────────────────────────────────────── */
@@ -561,7 +568,11 @@
     .contact-inner {
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      gap: 22px;
+    }
+
+    #contact .section-title {
+      margin-bottom: 0;
     }
 
     /* ─── Footer ───────────────────────────────────────────────────────── */
@@ -1285,99 +1296,53 @@
   <!-- ═══════════════════════════════════════════════════════ DEVICES -->
   <section id="devices">
     <div class="container">
-      <div class="section-label">Open Source</div>
-      <div class="section-title">Hardware</div>
+      <div class="section-label">Open Source Tutorials</div>
+      <div class="section-title">Build Your Own Lightning Device</div>
       <div class="devices-grid">
 
-        <!-- PLACEHOLDER: Add your GitHub repo URL and description -->
+        <!-- Smoke Machine -->
         <div class="device-card">
           <div class="device-card-icon">💨</div>
           <div class="device-card-name">Smoke Machine</div>
           <p class="device-card-desc">LNBits Switch + ESP32 relay. Triggers a real smoke machine via Lightning payment. Used at 5+ conferences.</p>
-          <!-- PLACEHOLDER: replace href with your GitHub repo URL -->
-          <a href="https://github.com/ezmo-dev" class="device-card-link" target="_blank" rel="noopener">
-            View on GitHub
+          <a href="https://github.com/ezmo-dev/lightning-smoke-machine" class="device-card-link" target="_blank" rel="noopener">
+            Tutorial on my GitHub
             <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M10 1H7V2.5h1.8L4.9 6.4l1.1 1.1L9.9 3.6V5.5H11V2a1 1 0 00-1-1zM2 2.5h4V1H2a1 1 0 00-1 1v8a1 1 0 001 1h8a1 1 0 001-1V7H9.5v3H2V2.5z"/>
             </svg>
           </a>
-          <span class="device-placeholder-note">Replace href with actual repo URL</span>
+          <a href="https://planb.academy/en/tutorials/business/others/lightning-smoke-machine-1a14c9e2-764f-4cbc-ab57-cf6c217a317d" class="device-card-link" target="_blank" rel="noopener">
+            Tutorial on Plan ₿ Academy
+            <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M10 1H7V2.5h1.8L4.9 6.4l1.1 1.1L9.9 3.6V5.5H11V2a1 1 0 00-1-1zM2 2.5h4V1H2a1 1 0 00-1 1v8a1 1 0 001 1h8a1 1 0 001-1V7H9.5v3H2V2.5z"/>
+            </svg>
+          </a>
         </div>
 
-        <!-- PLACEHOLDER: Add your GitHub repo URL and description -->
+        <!-- Bubble Machine -->
         <div class="device-card">
-          <div class="device-card-icon">🔒</div>
-          <div class="device-card-name">Treasure Hunt Chest</div>
-          <p class="device-card-desc">ESP32 + relay system. Lightning payment triggers smoke machine and releases electric lock. Pirate-themed enclosure.</p>
-          <!-- PLACEHOLDER: replace href with your GitHub repo URL -->
-          <a href="https://github.com/ezmo-dev" class="device-card-link" target="_blank" rel="noopener">
-            View on GitHub
-            <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M10 1H7V2.5h1.8L4.9 6.4l1.1 1.1L9.9 3.6V5.5H11V2a1 1 0 00-1-1zM2 2.5h4V1H2a1 1 0 00-1 1v8a1 1 0 001 1h8a1 1 0 001-1V7H9.5v3H2V2.5z"/>
-            </svg>
-          </a>
-          <span class="device-placeholder-note">Replace href with actual repo URL</span>
+          <div class="device-card-icon">🫧</div>
+          <div class="device-card-name">Bubble Machine</div>
+          <p class="device-card-desc">Pay sats, get bubbles. Hardware bubble machine triggered via Lightning payment.</p>
+          <span class="device-coming-soon">Multilingual tutorials coming soon</span>
         </div>
 
-        <!-- PLACEHOLDER: Add your GitHub repo URL and description -->
-        <div class="device-card">
-          <div class="device-card-icon">🎛️</div>
-          <div class="device-card-name">BTCPay GPIO Plugin</div>
-          <p class="device-card-desc">Open-source BTCPay Server plugin for GPIO activation. Trigger physical hardware directly from payment events.</p>
-          <!-- PLACEHOLDER: replace href with your GitHub repo URL -->
-          <a href="https://github.com/ezmo-dev" class="device-card-link" target="_blank" rel="noopener">
-            View on GitHub
-            <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M10 1H7V2.5h1.8L4.9 6.4l1.1 1.1L9.9 3.6V5.5H11V2a1 1 0 00-1-1zM2 2.5h4V1H2a1 1 0 00-1 1v8a1 1 0 001 1h8a1 1 0 001-1V7H9.5v3H2V2.5z"/>
-            </svg>
-          </a>
-          <span class="device-placeholder-note">Replace href with actual repo URL</span>
-        </div>
-
-        <!-- PLACEHOLDER: Add your GitHub repo URL and description -->
+        <!-- Candy Machine -->
         <div class="device-card">
           <div class="device-card-icon">🍬</div>
           <div class="device-card-name">Candy Machine</div>
           <p class="device-card-desc">Pay sats, receive candy. Hardware candy dispenser controlled via Lightning payment.</p>
-          <!-- PLACEHOLDER: replace href with your GitHub repo URL -->
-          <a href="https://github.com/ezmo-dev" class="device-card-link" target="_blank" rel="noopener">
-            View on GitHub
-            <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M10 1H7V2.5h1.8L4.9 6.4l1.1 1.1L9.9 3.6V5.5H11V2a1 1 0 00-1-1zM2 2.5h4V1H2a1 1 0 00-1 1v8a1 1 0 001 1h8a1 1 0 001-1V7H9.5v3H2V2.5z"/>
-            </svg>
-          </a>
-          <span class="device-placeholder-note">Replace href with actual repo URL</span>
+          <span class="device-coming-soon">Multilingual tutorials coming soon</span>
         </div>
 
-        <!-- PLACEHOLDER: Add your GitHub repo URL and description -->
+        <!-- Treasure Hunt Chest -->
         <div class="device-card">
-          <div class="device-card-icon">🎆</div>
-          <div class="device-card-name">Laser DMX Controller</div>
-          <p class="device-card-desc">DMX lighting rig controlled via Lightning payments. Laser effects triggered in real time from the audience.</p>
-          <!-- PLACEHOLDER: replace href with your GitHub repo URL -->
-          <a href="https://github.com/ezmo-dev" class="device-card-link" target="_blank" rel="noopener">
-            View on GitHub
-            <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M10 1H7V2.5h1.8L4.9 6.4l1.1 1.1L9.9 3.6V5.5H11V2a1 1 0 00-1-1zM2 2.5h4V1H2a1 1 0 00-1 1v8a1 1 0 001 1h8a1 1 0 001-1V7H9.5v3H2V2.5z"/>
-            </svg>
-          </a>
-          <span class="device-placeholder-note">Replace href with actual repo URL</span>
+          <div class="device-card-icon">🔒</div>
+          <div class="device-card-name">Treasure Hunt Chest</div>
+          <p class="device-card-desc">ESP32 + relay system. Lightning payment triggers smoke machine and releases electric lock. Pirate-themed enclosure.</p>
+          <span class="device-coming-soon">Multilingual tutorials coming soon</span>
         </div>
 
-        <!-- PLACEHOLDER: Add your GitHub repo URL and description -->
-        <div class="device-card">
-          <div class="device-card-icon">🎨</div>
-          <div class="device-card-name">Prompt to VJing</div>
-          <p class="device-card-desc">TouchDesigner + StreamDiffusion + AI. Lightning payment sends a text prompt to generate real-time AI visuals projected live.</p>
-          <!-- PLACEHOLDER: replace href with your GitHub repo URL -->
-          <a href="https://github.com/ezmo-dev" class="device-card-link" target="_blank" rel="noopener">
-            View on GitHub
-            <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M10 1H7V2.5h1.8L4.9 6.4l1.1 1.1L9.9 3.6V5.5H11V2a1 1 0 00-1-1zM2 2.5h4V1H2a1 1 0 00-1 1v8a1 1 0 001 1h8a1 1 0 001-1V7H9.5v3H2V2.5z"/>
-            </svg>
-          </a>
-          <span class="device-placeholder-note">Replace href with actual repo URL</span>
-        </div>
 
       </div>
     </div>
@@ -1392,6 +1357,14 @@
         <p style="color: var(--muted); font-size: 15px; max-width: 480px;">
           Building open-source Lightning hardware for real-world Bitcoin adoption. Open to collaborations, events, and educational partnerships.
         </p>
+        <div>
+          <a href="mailto:ezmo1@protonmail.com" class="hero-link" style="display:inline-flex;">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:16px;height:16px;fill:currentColor;">
+              <path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            ezmo1@protonmail.com
+          </a>
+        </div>
         <div>
           <a href="https://github.com/ezmo-dev" class="hero-link" target="_blank" rel="noopener" style="display:inline-flex;">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:16px;height:16px;fill:currentColor;">
