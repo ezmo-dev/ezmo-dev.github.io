@@ -513,11 +513,12 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
-      transition: border-color 0.2s;
+      transition: border-color 0.25s, box-shadow 0.25s;
     }
 
     .device-card:hover {
-      border-color: #333;
+      border-color: rgba(255,255,255,0.35);
+      box-shadow: 0 0 8px rgba(255,255,255,0.4), 0 0 24px rgba(255,255,255,0.15), 0 0 48px rgba(255,255,255,0.06);
     }
 
     .device-card-icon {
@@ -526,9 +527,24 @@
     }
 
     .device-card-name {
-      font-size: 16px;
+      font-size: 20px;
       font-weight: 700;
       color: var(--text);
+      transition: color 0.25s, text-shadow 0.25s;
+      margin-bottom: -4px;
+    }
+
+    .device-card-subtitle {
+      font-size: 11px;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 0.4px;
+      opacity: 0.7;
+    }
+
+    .device-card:hover .device-card-name {
+      color: #fff;
+      text-shadow: 0 0 8px rgba(255,255,255,0.5), 0 0 20px rgba(255,255,255,0.2);
     }
 
     .device-card-desc {
@@ -536,6 +552,10 @@
       color: var(--muted);
       line-height: 1.5;
       flex: 1;
+    }
+
+    .device-card-desc + .device-card-link {
+      margin-top: 8px;
     }
 
     .device-card-link {
@@ -1302,17 +1322,17 @@
 
         <!-- Smoke Machine -->
         <div class="device-card">
-          <div class="device-card-icon">💨</div>
           <div class="device-card-name">Smoke Machine</div>
-          <p class="device-card-desc">LNBits Switch + ESP32 relay. Triggers a real smoke machine via Lightning payment. Used at 5+ conferences.</p>
+          <div class="device-card-subtitle">Deployed at 5+ conferences</div>
+          <p class="device-card-desc">LNBits Switch + ESP32 relay. Triggers a real smoke machine via Lightning payment.</p>
           <a href="https://github.com/ezmo-dev/lightning-smoke-machine" class="device-card-link" target="_blank" rel="noopener">
-            Tutorial on my GitHub
+            → Tutorial on my GitHub
             <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M10 1H7V2.5h1.8L4.9 6.4l1.1 1.1L9.9 3.6V5.5H11V2a1 1 0 00-1-1zM2 2.5h4V1H2a1 1 0 00-1 1v8a1 1 0 001 1h8a1 1 0 001-1V7H9.5v3H2V2.5z"/>
             </svg>
           </a>
           <a href="https://planb.academy/en/tutorials/business/others/lightning-smoke-machine-1a14c9e2-764f-4cbc-ab57-cf6c217a317d" class="device-card-link" target="_blank" rel="noopener">
-            Tutorial on Plan ₿ Academy
+            → Tutorial on Plan ₿ Academy
             <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M10 1H7V2.5h1.8L4.9 6.4l1.1 1.1L9.9 3.6V5.5H11V2a1 1 0 00-1-1zM2 2.5h4V1H2a1 1 0 00-1 1v8a1 1 0 001 1h8a1 1 0 001-1V7H9.5v3H2V2.5z"/>
             </svg>
@@ -1321,24 +1341,24 @@
 
         <!-- Bubble Machine -->
         <div class="device-card">
-          <div class="device-card-icon">🫧</div>
           <div class="device-card-name">Bubble Machine</div>
+          <div class="device-card-subtitle">Deployed at 1 conference</div>
           <p class="device-card-desc">Pay sats, get bubbles. Hardware bubble machine triggered via Lightning payment.</p>
           <span class="device-coming-soon">Multilingual tutorials coming soon</span>
         </div>
 
         <!-- Candy Machine -->
         <div class="device-card">
-          <div class="device-card-icon">🍬</div>
           <div class="device-card-name">Candy Machine</div>
+          <div class="device-card-subtitle">Deployed at 4+ conferences</div>
           <p class="device-card-desc">Pay sats, receive candy. Hardware candy dispenser controlled via Lightning payment.</p>
           <span class="device-coming-soon">Multilingual tutorials coming soon</span>
         </div>
 
         <!-- Treasure Hunt Chest -->
         <div class="device-card">
-          <div class="device-card-icon">🔒</div>
-          <div class="device-card-name">Treasure Hunt Chest</div>
+          <div class="device-card-name">Treasure Hunt</div>
+          <div class="device-card-subtitle">Deployed at 6+ conferences</div>
           <p class="device-card-desc">ESP32 + relay system. Lightning payment triggers smoke machine and releases electric lock. Pirate-themed enclosure.</p>
           <span class="device-coming-soon">Multilingual tutorials coming soon</span>
         </div>
@@ -1381,7 +1401,7 @@
   <footer>
     <div class="container">
       <div class="footer-inner">
-        <span class="footer-name">ezmo.dev</span>
+        <span class="footer-name">proof-of-work</span>
         <span class="footer-note">Open-Source Lightning Hardware — Real-World Deployment &amp; Education</span>
       </div>
     </div>
