@@ -564,6 +564,38 @@
       height: 100%;
     }
 
+    /* ─── BTC Prague media grid ────────────────────────────────────────── */
+    .photo-grid-prague {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      margin-top: 8px;
+      height: 500px;
+    }
+
+    .photo-grid-prague .prague-left {
+      flex: 0 0 50%;
+      background: #181818;
+      border: 1px solid #222;
+      border-radius: 6px;
+      overflow: auto;
+      padding: 12px;
+      box-sizing: border-box;
+    }
+
+    .photo-grid-prague .prague-right {
+      flex: 0 0 calc(50% - 8px);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .photo-grid-prague .prague-right .photo-slot {
+      flex: 1;
+      aspect-ratio: unset;
+      height: 50%;
+    }
+
     .placeholder-photo-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -1026,22 +1058,18 @@
                 </table>
 
                 <div class="case-section-title" style="margin-top:28px;">Photos</div>
-                <div class="photo-grid">
-                  <div class="photo-slot">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 19V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2zM8.5 13.5l2.5 3 3.5-4.5 4.5 6H5l3.5-4.5z"/></svg>
-                    Add photo
+                <div class="photo-grid-prague">
+                  <div class="prague-left">
+                    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Congratulations to <a href="https://twitter.com/mariusoffchain?ref_src=twsrc%5Etfw">@mariusoffchain</a> for solving the entire puzzle in record time! Thanks for documenting the entire process and for leaving prizes for the other hunters! <a href="https://t.co/j4eFT9icfq">https://t.co/j4eFT9icfq</a></p>&mdash; Plan ₿ Network (@planb_network) <a href="https://twitter.com/planb_network/status/1936714054149496896?ref_src=twsrc%5Etfw">June 22, 2025</a></blockquote>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                   </div>
-                  <div class="photo-slot">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 19V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2zM8.5 13.5l2.5 3 3.5-4.5 4.5 6H5l3.5-4.5z"/></svg>
-                    Add photo
-                  </div>
-                  <div class="photo-slot">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 19V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2zM8.5 13.5l2.5 3 3.5-4.5 4.5 6H5l3.5-4.5z"/></svg>
-                    Add photo
-                  </div>
-                  <div class="photo-slot">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 19V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2zM8.5 13.5l2.5 3 3.5-4.5 4.5 6H5l3.5-4.5z"/></svg>
-                    Add photo
+                  <div class="prague-right">
+                    <div class="photo-slot">
+                      <img src="assets/images/5.webp" alt="BTC Prague">
+                    </div>
+                    <div class="photo-slot">
+                      <img src="assets/images/6.webp" alt="BTC Prague">
+                    </div>
                   </div>
                 </div>
               </div>
