@@ -1061,6 +1061,7 @@
                     <tr><td>Total</td><td>185</td><td>81,124</td></tr>
                   </tbody>
                 </table>
+                <p style="font-size:11px;color:#777777;margin-top:8px;">* Treasure Hunt: sats collected at each QR code. Net negative = uncompleted runs kept by the players.</p>
 
                 <div class="case-section-title" style="margin-top:28px;">Photos</div>
                 <div class="photo-grid-prague">
@@ -1546,7 +1547,7 @@
         c.classList.remove('is-open');
       });
 
-      // If this card was not already open, open it
+      // If this card was not already open, open it; otherwise scroll back to section
       if (!wasOpen) {
         card.classList.add('is-open');
 
@@ -1554,6 +1555,8 @@
         setTimeout(function() {
           card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }, 50);
+      } else {
+        document.getElementById('deployments').scrollIntoView({ behavior: 'smooth' });
       }
     }
 
