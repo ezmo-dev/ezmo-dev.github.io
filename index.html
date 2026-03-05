@@ -530,6 +530,40 @@
       margin-bottom: 20px;
     }
 
+    /* ─── Plan B Forum media grid ──────────────────────────────────────── */
+    .photo-grid-planb {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .photo-grid-planb .planb-top-row {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      height: 380px;
+    }
+
+    .photo-grid-planb .planb-top-row .photo-slot {
+      flex: 1;
+      aspect-ratio: unset;
+      height: 100%;
+    }
+
+    .photo-grid-planb .planb-bottom-row {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      height: 280px;
+    }
+
+    .photo-grid-planb .planb-bottom-row .photo-slot {
+      flex: 1;
+      aspect-ratio: unset;
+      height: 100%;
+    }
+
     .placeholder-photo-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -755,7 +789,7 @@
               <span class="device-tag">Candy Machine</span>
               <span class="device-tag">Treasure Hunt</span>
               <span class="device-tag">Sats Dice</span>
-              <span class="device-tag">Display Messages</span>
+              <span class="device-tag">LED Stage Control</span>
             </div>
             <div class="card-cta">
               <span>Read case study</span>
@@ -784,7 +818,7 @@
                 <p class="case-text"><strong>Treasure Hunt</strong> — Lightning hidden QR code concealed across the venue. Finding and paying it unlocks the reward.</p>
                 <p class="case-text"><strong>Candy Machine</strong> — LNBits Instance + BitcoinSwitchFirmware + ESP32 & relay. Dispenses candy on Lightning payment.</p>
                 <p class="case-text"><strong>Sats Dice</strong> — LNBits Instance + BitcoinSwitchFirmware. Dice roll result triggered via Lightning payment.</p>
-                <p class="case-text"><strong>Display Messages</strong> — Pay sats to display a message on a public screen.</p>
+                <p class="case-text"><strong>LED Stage Control</strong> — ESP32 + LNBits Instance + BitcoinSwitchFirmware. Pay sats to change the color of the LED lighting on the DJ booth, giving the audience direct control over the stage scenography in real time.</p>
               </div>
               <div>
                 <div class="case-section-title">API Results</div>
@@ -798,7 +832,7 @@
                   </thead>
                   <tbody>
                     <tr><td>Smoke Machine</td><td>24</td><td>90,060</td></tr>
-                    <tr><td>Display Messages</td><td>91</td><td>17,375</td></tr>
+                    <tr><td>LED Stage Control</td><td>91</td><td>17,375</td></tr>
                     <tr><td>Treasure Hunt</td><td>54</td><td>—</td></tr>
                     <tr><td>Candy Machine</td><td>46</td><td>244,930</td></tr>
                     <tr><td>Sats Dice</td><td>39</td><td>17,092</td></tr>
@@ -863,13 +897,13 @@
             <div class="card-body-inner">
               <div>
                 <div class="case-section-title">Overview</div>
-                <p class="case-text">Plan ₿ Forum at the Marte Museum in San Salvador. Deployed at the request of Plan B Forum to provide multiple Lightning-activated installations across the venue. Building on lessons from the Adopting Bitcoin after party with new and upgraded devices.</p>
+                <p class="case-text">Plan ₿ Forum at the Marte Museum in San Salvador. Deployed at the request of Plan ₿ Forum to provide multiple Lightning-activated installations across the venue. Building on lessons from the Adopting Bitcoin after party with new and upgraded devices.</p>
                 <p class="case-text">New installations included AI-powered generative visuals triggered by Lightning payments, displayed on a large LED panel on the main stage. Two giant lasers were positioned at the base of a large statue inside the museum, powerful enough to be seen from outside the venue. The lasers were also synchronized during a drone show. In collaboration with a Salvadorian company, a VJing setup projected Bitcoin-themed video montages on a large wall of the museum.</p>
 
                 <div class="case-section-title" style="margin-top:28px;">Hardware</div>
-                <p class="case-text"><strong>Smoke Machine</strong> — Upgraded iteration of the LNBits Switch + ESP32 relay system.</p>
-                <p class="case-text"><strong>Prompt to VJing</strong> — TouchDesigner + StreamDiffusion + AI pipeline. A Lightning payment sends a text prompt that generates real-time AI visuals projected at the event.</p>
-                <p class="case-text"><strong>Treasure Hunt</strong> — Lightning-activated lock: finding the hidden QR code and paying unlocks a physical mechanism.</p>
+                <p class="case-text"><strong>Smoke Machine</strong> — Upgraded iteration of the LNBits Instance + BitcoinSwitchFirmware + ESP32 & relay system.</p>
+                <p class="case-text"><strong>Prompt to VJing</strong> — TouchDesigner + StreamDiffusion + DMX controller. A Lightning payment sends a text prompt that generates real-time AI visuals projected at the event.</p>
+                <p class="case-text"><strong>Treasure Hunt</strong> — Lightning-activated lock: finding the 12 hidden QR codes around the venue and paying the last QR code on a treasure box unlocks a physical locker and wins the prizes.</p>
                 <p class="case-text"><strong>Laser DMX Controller</strong> — Laser lighting rig triggered and controlled via Lightning payments.</p>
               </div>
               <div>
@@ -892,22 +926,25 @@
                 </table>
 
                 <div class="case-section-title" style="margin-top:28px;">Photos</div>
-                <div class="photo-grid">
-                  <div class="photo-slot">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 19V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2zM8.5 13.5l2.5 3 3.5-4.5 4.5 6H5l3.5-4.5z"/></svg>
-                    Add photo
+                <div class="photo-grid-planb">
+                  <div class="planb-top-row">
+                    <div class="photo-slot">
+                      <iframe src="https://www.youtube.com/embed/E2PJ_CrKpuE" title="Plan B Forum" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="photo-slot">
+                      <iframe src="https://www.youtube.com/embed/Z4sgHmkzaBk" title="Plan B Forum" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="photo-slot">
+                      <iframe src="https://www.youtube.com/embed/p80dwYX3NHI" title="Plan B Forum" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
                   </div>
-                  <div class="photo-slot">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 19V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2zM8.5 13.5l2.5 3 3.5-4.5 4.5 6H5l3.5-4.5z"/></svg>
-                    Add photo
-                  </div>
-                  <div class="photo-slot">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 19V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2zM8.5 13.5l2.5 3 3.5-4.5 4.5 6H5l3.5-4.5z"/></svg>
-                    Add photo
-                  </div>
-                  <div class="photo-slot">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 19V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2zM8.5 13.5l2.5 3 3.5-4.5 4.5 6H5l3.5-4.5z"/></svg>
-                    Add photo
+                  <div class="planb-bottom-row">
+                    <div class="photo-slot">
+                      <img src="assets/images/3.webp" alt="Plan B Forum">
+                    </div>
+                    <div class="photo-slot">
+                      <img src="assets/images/4.webp" alt="Plan B Forum">
+                    </div>
                   </div>
                 </div>
               </div>
