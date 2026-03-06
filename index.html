@@ -383,6 +383,7 @@
       border-collapse: collapse;
       font-size: 13px;
       margin-top: 8px;
+      table-layout: fixed;
     }
 
     .case-table th {
@@ -402,8 +403,14 @@
       color: var(--text);
     }
 
-    .case-table td:last-child {
+    .case-table td:nth-child(2),
+    .case-table th:nth-child(2),
+    .case-table td:last-child,
+    .case-table th:last-child {
       text-align: right;
+    }
+
+    .case-table td:last-child {
       color: var(--muted);
     }
 
@@ -743,6 +750,42 @@
     .footer-note {
       font-size: 12px;
       color: #444;
+    }
+
+    @media (max-width: 640px) {
+      .container { padding: 0 16px; }
+
+      .card-header { padding: 16px; }
+
+      .card-body { padding: 0 16px 20px; }
+
+      .card-body-inner { grid-template-columns: 1fr; gap: 24px; }
+
+      .card-stat-value { font-size: 15px; }
+
+      .case-table { font-size: 11px; }
+
+      .photo-grid { grid-template-columns: 1fr; }
+
+      .photo-grid-portrait {
+        flex-direction: column;
+        height: auto;
+      }
+      .photo-col-video { width: 100%; }
+      .photo-col-video .photo-slot { height: 240px; aspect-ratio: unset; }
+      .photo-col-images { width: 100%; }
+      .photo-col-images .photo-slot { height: 200px; aspect-ratio: unset; }
+
+      .planb-top-row { flex-direction: column; height: auto; }
+      .planb-top-row .photo-slot { height: 240px; }
+      .planb-bottom-row { flex-direction: column; height: auto; }
+      .planb-bottom-row .photo-slot { height: 200px; }
+
+      .prague-top-row { flex-direction: column; }
+      .prague-bottom-row { flex-direction: column; height: auto; }
+      .prague-bottom-row .photo-slot { height: 200px; }
+
+      .placeholder-photo-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -1211,6 +1254,11 @@
               <div>
                 <div class="case-section-title">API Results</div>
                 <table class="case-table">
+                  <colgroup>
+                    <col style="width:60%">
+                    <col style="width:20%">
+                    <col style="width:20%">
+                  </colgroup>
                   <thead>
                     <tr>
                       <th>Device</th>
@@ -1228,6 +1276,11 @@
                 </table>
 
                 <table class="case-table" style="margin-top:20px;">
+                  <colgroup>
+                    <col style="width:60%">
+                    <col style="width:20%">
+                    <col style="width:20%">
+                  </colgroup>
                   <thead>
                     <tr>
                       <th>Party</th>
@@ -1243,6 +1296,11 @@
                 </table>
 
                 <table class="case-table" style="margin-top:20px;">
+                  <colgroup>
+                    <col style="width:60%">
+                    <col style="width:20%">
+                    <col style="width:20%">
+                  </colgroup>
                   <thead>
                     <tr>
                       <th>Grand Total</th>
