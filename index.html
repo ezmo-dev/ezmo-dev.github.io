@@ -752,40 +752,60 @@
       color: #444;
     }
 
-    @media (max-width: 640px) {
+    /* ─── Utilities ────────────────────────────────────────────────────── */
+    .mt-section { margin-top: 28px; }
+    .photo-stack { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+    .photo-stack img { width: 100%; height: auto; display: block; border: 1px solid #222; border-radius: 4px; }
+
+    /* ─── Mobile ───────────────────────────────────────────────────────── */
+    @media (max-width: 600px) {
       .container { padding: 0 16px; }
 
+      section { padding: 48px 0; }
+
+      #hero { padding: 72px 0 32px; }
+
+      /* Numbers */
+      .stat { padding: 24px 16px; }
+
+      /* Card header */
       .card-header { padding: 16px; }
+      .card-stat-value { font-size: 14px; }
+      .device-tag { font-size: 10px; }
 
+      /* Card body */
       .card-body { padding: 0 16px 20px; }
-
       .card-body-inner { grid-template-columns: 1fr; gap: 24px; }
 
-      .card-stat-value { font-size: 15px; }
+      /* Tables */
+      .case-table { font-size: 12px; }
 
-      .case-table { font-size: 11px; }
-
+      /* Photo grids: all stack vertically */
       .photo-grid { grid-template-columns: 1fr; }
 
-      .photo-grid-portrait {
-        flex-direction: column;
-        height: auto;
-      }
+      .photo-slot { height: 220px; aspect-ratio: unset; }
+
+      .photo-slot iframe { min-height: 220px; }
+
+      .photo-grid-portrait { flex-direction: column; height: auto; }
       .photo-col-video { width: 100%; }
-      .photo-col-video .photo-slot { height: 240px; aspect-ratio: unset; }
+      .photo-col-video .photo-slot { height: 220px; }
       .photo-col-images { width: 100%; }
-      .photo-col-images .photo-slot { height: 200px; aspect-ratio: unset; }
+      .photo-col-images .photo-slot { height: 220px; }
 
       .planb-top-row { flex-direction: column; height: auto; }
-      .planb-top-row .photo-slot { height: 240px; }
+      .planb-top-row .photo-slot { height: 220px; }
       .planb-bottom-row { flex-direction: column; height: auto; }
-      .planb-bottom-row .photo-slot { height: 200px; }
+      .planb-bottom-row .photo-slot { height: 220px; }
 
       .prague-top-row { flex-direction: column; }
       .prague-bottom-row { flex-direction: column; height: auto; }
-      .prague-bottom-row .photo-slot { height: 200px; }
+      .prague-bottom-row .photo-slot { height: 220px; }
 
       .placeholder-photo-grid { grid-template-columns: 1fr; }
+
+      /* Footer */
+      .footer-inner { flex-direction: column; gap: 8px; }
     }
   </style>
 </head>
@@ -885,7 +905,7 @@
                 <p class="case-text">After-party for the Adopting Bitcoin conference held at Edificio Morazan in San Salvador. Over 635 attendees experienced a fully Lightning-powered event featuring interactive hardware installations that accepted Bitcoin payments in real time.</p>
                 <p class="case-text">8 local artists participated. Lightning-powered catering generated over $5,000 in revenue. More than 200 Blink wallets were created on-site, and 120+ NFC cards were distributed.</p>
 
-                <div class="case-section-title" style="margin-top:28px;">Onboarding Stack</div>
+                <div class="case-section-title mt-section">Onboarding Stack</div>
                 <div class="case-pills">
                   <span class="case-pill">Bolt Cards (Tiankii Wallet)</span>
                   <span class="case-pill">Blink Wallet</span>
@@ -893,7 +913,7 @@
                   <span class="case-pill">Chivo Wallet</span>
                 </div>
 
-                <div class="case-section-title" style="margin-top:28px;">Hardware</div>
+                <div class="case-section-title mt-section">Hardware</div>
                 <p class="case-text"><strong>Smoke Machine</strong> — LNBits Instance + BitcoinSwitchFirmware + ESP32 & relay. Payments trigger a real smoke machine via Lightning.</p>
                 <p class="case-text"><strong>Treasure Hunt</strong> — Lightning hidden QR code concealed across the venue. Finding and paying it unlocks the reward.</p>
                 <p class="case-text"><strong>Candy Machine</strong> — LNBits Instance + BitcoinSwitchFirmware + ESP32 & relay. Dispenses candy on Lightning payment.</p>
@@ -920,7 +940,7 @@
                   </tbody>
                 </table>
 
-                <div class="case-section-title" style="margin-top:28px;">Photos</div>
+                <div class="case-section-title mt-section">Photos</div>
                 <div class="photo-grid-portrait">
                   <div class="photo-col-video">
                     <div class="photo-slot">
@@ -929,10 +949,10 @@
                   </div>
                   <div class="photo-col-images">
                     <div class="photo-slot">
-                      <img src="assets/images/1.webp" alt="Adopting Bitcoin After Party">
+                      <img src="assets/images/1.webp" loading="lazy" alt="Adopting Bitcoin After Party">
                     </div>
                     <div class="photo-slot">
-                      <img src="assets/images/2.webp" alt="Adopting Bitcoin After Party">
+                      <img src="assets/images/2.webp" loading="lazy" alt="Adopting Bitcoin After Party">
                     </div>
                   </div>
                 </div>
@@ -980,7 +1000,7 @@
                 <p class="case-text">Plan ₿ Forum at the Marte Museum in San Salvador. Deployed at the request of Plan ₿ Forum to provide multiple Lightning-activated installations across the venue. Building on lessons from the Adopting Bitcoin after party with new and upgraded devices.</p>
                 <p class="case-text">New installations included AI-powered generative visuals triggered by Lightning payments, displayed on a large LED panel on the main stage. Two giant lasers were positioned at the base of a large statue inside the museum, powerful enough to be seen from outside the venue. The lasers were also synchronized during a drone show. In collaboration with a Salvadorian company, a VJing setup projected Bitcoin-themed video montages on a large wall of the museum.</p>
 
-                <div class="case-section-title" style="margin-top:28px;">Hardware</div>
+                <div class="case-section-title mt-section">Hardware</div>
                 <p class="case-text"><strong>Smoke Machine</strong> — Upgraded iteration of the LNBits Instance + BitcoinSwitchFirmware + ESP32 & relay system.</p>
                 <p class="case-text"><strong>Prompt to VJing</strong> — TouchDesigner + StreamDiffusion + DMX controller. A Lightning payment sends a text prompt that generates real-time AI visuals projected at the event.</p>
                 <p class="case-text"><strong>Treasure Hunt</strong> — Lightning-activated lock: finding the 12 hidden QR codes around the venue and paying the last QR code on a treasure box unlocks a physical locker and wins the prizes.</p>
@@ -1005,7 +1025,7 @@
                   </tbody>
                 </table>
 
-                <div class="case-section-title" style="margin-top:28px;">Photos</div>
+                <div class="case-section-title mt-section">Photos</div>
                 <div class="photo-grid-planb">
                   <div class="planb-top-row">
                     <div class="photo-slot">
@@ -1020,10 +1040,10 @@
                   </div>
                   <div class="planb-bottom-row">
                     <div class="photo-slot">
-                      <img src="assets/images/3.webp" alt="Plan B Forum">
+                      <img src="assets/images/3.webp" loading="lazy" alt="Plan B Forum">
                     </div>
                     <div class="photo-slot">
-                      <img src="assets/images/4.webp" alt="Plan B Forum">
+                      <img src="assets/images/4.webp" loading="lazy" alt="Plan B Forum">
                     </div>
                   </div>
                 </div>
@@ -1070,16 +1090,16 @@
                 <p class="case-text">The smoke machine was displayed on the Plan ₿ Network booth to attract people, and the hacked remote with the ESP32, relay and cables was placed in a transparent plastic box with exposed wiring as an educational exhibit.</p>
                 <p class="case-text">The smoke machine booth generated approximately $80 in revenue over the event days.</p>
 
-                <div class="case-section-title" style="margin-top:28px;">Treasure Hunt Format</div>
+                <div class="case-section-title mt-section">Treasure Hunt Format</div>
                 <p class="case-text">12 seed words were hidden across the venue and at partner booths, each with a Bitcoin trivia challenge about their company. Words were distributed to partners in sealed envelopes. Players had to follow the journey, find the hidden QR codes, and answer the trivia questions to continue and collect the 12 seed words.</p>
                 <p class="case-text">The final QR code was placed on the chest. Once scanned, players had to enter the 12 seed words found throughout the journey and make a Lightning payment to trigger the ESP32: the smoke machine fired, then the electric lock released.</p>
                 <p class="case-text">In collaboration with RockstarDev, 6 RockstarDev clones were placed around the venue, but only 3 carried the real password and trivia question, adding an extra layer of difficulty to the hunt.</p>
 
-                <div class="case-section-title" style="margin-top:28px;">Hardware</div>
+                <div class="case-section-title mt-section">Hardware</div>
                 <p class="case-text"><strong>Lightning Treasure Chest (Pirate theme)</strong> — BTCPay Server Instance with password form to unlock the chest, BitcoinSwitchFirmware, ESP32, 12V power supply, and 2 relays: one for the electric lock, one for the smoke machine remote.</p>
                 <p class="case-text"><strong>Smoke Machine</strong> — LNBits Instance + BitcoinSwitchFirmware + ESP32 & relay. Transparent case with exposed wiring, displayed as an educational booth installation.</p>
 
-                <div class="case-section-title" style="margin-top:28px;">Partners</div>
+                <div class="case-section-title mt-section">Partners</div>
                 <div class="case-pills">
                   <span class="case-pill">AmityAge</span>
                   <span class="case-pill">JAN3</span>
@@ -1106,14 +1126,14 @@
                 </table>
                 <p style="font-size:11px;color:#777777;margin-top:8px;">* Treasure Hunt: sats collected at each QR code. Net negative = uncompleted runs kept by the players.</p>
 
-                <div class="case-section-title" style="margin-top:28px;">Photos</div>
+                <div class="case-section-title mt-section">Photos</div>
                 <div class="photo-grid-prague">
                   <div class="prague-bottom-row">
                     <div class="photo-slot">
-                      <img src="assets/images/5.webp" alt="BTC Prague">
+                      <img src="assets/images/5.webp" loading="lazy" alt="BTC Prague">
                     </div>
                     <div class="photo-slot">
-                      <img src="assets/images/6.webp" alt="BTC Prague">
+                      <img src="assets/images/6.webp" loading="lazy" alt="BTC Prague">
                     </div>
                   </div>
                   <div class="prague-top-row">
@@ -1171,20 +1191,20 @@
                 <p class="case-text">A week-long educational residency at PoW.Space in Lugano, Switzerland. The 21 students selected were the top performers from the Plan ₿ School, chosen for their results to attend this exclusive residency. The student curriculum included live lectures, hands-on building sessions, and a graduation ceremony. The event featured many guest speakers from the Bitcoin culture.</p>
                 <p class="case-text">Plan ₿ Studio was invited by PoW.Space to add an interactive Lightning layer to the residency, turning the venue into a live testing ground for Bitcoin-powered hardware. Students stress-tested Lightning-powered prototypes that turned payments into physical reactions, activating interactive artworks, lights, candy pill dispensers, a smoke machine, and a treasure hunt adapted to the venue. Those experiments demonstrated that Bitcoin technology becomes much more engaging when it leaves the screen and enters the real world.</p>
 
-                <div class="case-section-title" style="margin-top:28px;">Technical Stack Evolution</div>
+                <div class="case-section-title mt-section">Technical Stack Evolution</div>
                 <p class="case-text">The Summer School served as a live crash test in preparation for Baltic Honeybadger. Started with BTCPay Server connected to a Blink node. Under classroom load, Blink node response times caused 10-minute latency spikes. Root cause identified as Blink node slowness, not BTCPay. It was also the first real-world test of the BitcoinSwitch plugin on BTCPay Server, testing both simple GPIO triggering and password form activation.</p>
                 <p class="case-text">Migrated mid-week to LNbits, a familiar stack from previous deployments, which resolved the latency issues. The work continued after the Summer School during the preparation for Baltic Honeybadger. The final production stack connected BTCPay Server to an LND node integrated with Ark, with Boltz acting as the Lightning gateway, handling the bridge between incoming Lightning payments and the Ark environment. This allowed anyone with a standard Lightning wallet to pay seamlessly, with no channel management required.</p>
 
-                <div class="case-section-title" style="margin-top:28px;">BTCPay Server Plugin</div>
+                <div class="case-section-title mt-section">BTCPay Server Plugin</div>
                 <p class="case-text">First real-world deployment of the BitcoinSwitch plugin on BTCPay Server. The Summer School served as a live stress test for two activation modes: simple GPIO triggering for direct hardware control, and password form activation for the treasure hunt chest. Both modes were tested under real conditions with 21 students interacting simultaneously, providing valuable feedback for future deployments.</p>
 
-                <div class="case-section-title" style="margin-top:28px;">Treasure Hunt Format</div>
+                <div class="case-section-title mt-section">Treasure Hunt Format</div>
                 <p class="case-text">Each day, 3 QR codes were hidden across PoW.Space, each containing a hint and a question based on the previous day's lecture. The questions were designed in collaboration with the guest speakers who gave the live lectures. Players had to find the QR codes, answer the question correctly to receive a clue leading to the next one, and collect one keyword per day. The hunt reset every day at midday with new QR codes and new questions.</p>
                 <p class="case-text">Over the week, 12 keywords were collected to form a final passphrase. Decoding challenges including Caesar ciphers, ROT13/21, and SHA-256 hash puzzles were introduced as a first test to increase the difficulty of the treasure hunt format, building toward more complex deployments in future conferences.</p>
               </div>
               <div>
                 <div class="case-section-title">Hardware</div>
-                <div class="case-pills" style="margin-top:8px;">
+                <div class="case-pills">
                   <span class="case-pill">Smoke Machine</span>
                   <span class="case-pill">Treasure Hunt</span>
                   <span class="case-pill">Candy Pill Dispensers</span>
@@ -1192,11 +1212,11 @@
                   <span class="case-pill">Lights</span>
                 </div>
 
-                <div class="case-section-title" style="margin-top:28px;">Photos</div>
-                <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px;">
-                  <img src="assets/images/7.webp" alt="Plan ₿ Summer School" style="width:100%;height:auto;display:block;border:1px solid #222;">
-                  <img src="assets/images/8.webp" alt="Plan ₿ Summer School" style="width:100%;height:auto;display:block;border:1px solid #222;">
-                  <img src="assets/images/9.webp" alt="Plan ₿ Summer School" style="width:100%;height:auto;display:block;border:1px solid #222;">
+                <div class="case-section-title mt-section">Photos</div>
+                <div class="photo-stack">
+                  <img src="assets/images/7.webp" alt="Plan ₿ Summer School" loading="lazy">
+                  <img src="assets/images/8.webp" alt="Plan ₿ Summer School" loading="lazy">
+                  <img src="assets/images/9.webp" alt="Plan ₿ Summer School" loading="lazy">
                 </div>
               </div>
             </div>
@@ -1244,7 +1264,7 @@
                 <p class="case-text">Workshop: "IoT Powered by Lightning" — a live breakdown of the smoke machine from hardware to software, on the Workshop Stage.</p>
                 <p class="case-text">After party performers: Rockamoto, Rolling Dynamite, Mark Kadek, and a fire show. Treasure hunt: 2 winners.</p>
 
-                <div class="case-section-title" style="margin-top:28px;">Hardware</div>
+                <div class="case-section-title mt-section">Hardware</div>
                 <p class="case-text"><strong>Giant Honeybadger Head</strong> — Custom large-format prop that emits smoke on Lightning payment. Signature installation for the event.</p>
                 <p class="case-text"><strong>Smoke Machine</strong> — Standard deployment, booth at the conference.</p>
                 <p class="case-text"><strong>Flying Photo Booth</strong> — Takes and distributes photos triggered by Lightning payment.</p>
@@ -1313,7 +1333,7 @@
                   </tbody>
                 </table>
 
-                <div class="case-section-title" style="margin-top:28px;">Photos</div>
+                <div class="case-section-title mt-section">Photos</div>
                 <div class="photo-grid">
                   <div class="photo-slot">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 19V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2zM8.5 13.5l2.5 3 3.5-4.5 4.5 6H5l3.5-4.5z"/></svg>
@@ -1544,11 +1564,11 @@
           Building open-source Lightning hardware for real-world Bitcoin adoption. Open to collaborations, events, and educational partnerships.
         </p>
         <div>
-          <a href="mailto:ezmo1@protonmail.com" class="hero-link" style="display:inline-flex;">
+          <a href="/cdn-cgi/l/email-protection#cda8b7a0a2fc8dbdbfa2b9a2a3a0aca4a1e3aea2a0" class="hero-link" style="display:inline-flex;">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:16px;height:16px;fill:currentColor;">
               <path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
             </svg>
-            ezmo1@protonmail.com
+            <span class="__cf_email__" data-cfemail="abced1c6c49aebdbd9c4dfc4c5c6cac2c785c8c4c6">[email&#160;protected]</span>
           </a>
         </div>
         <div>
@@ -1574,9 +1594,8 @@
   </footer>
 
   <!-- ══════════════════════════════════════════════════ JavaScript -->
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     function toggleCard(card) {
-      const isPlaceholder = card.classList.contains('is-placeholder');
       const wasOpen = card.classList.contains('is-open');
 
       // Close all open cards first
@@ -1597,13 +1616,4 @@
       }
     }
 
-    // Prevent clicks on links inside expanded cards from toggling card
-    document.querySelectorAll('.card-body a, .placeholder-body a').forEach(function(link) {
-      link.addEventListener('click', function(e) {
-        e.stopPropagation();
-      });
-    });
-  </script>
-
-</body>
-</html>
+    // Prevent clicks on links inside expanded
