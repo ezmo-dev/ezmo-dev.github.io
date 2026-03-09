@@ -520,6 +520,43 @@
       aspect-ratio: unset;
     }
 
+    /* ─── Baltic Honeybadger media grid ────────────────────────────────── */
+    .photo-grid-baltic {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .photo-grid-baltic .baltic-bottom-row {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      height: 480px;
+    }
+
+    .photo-grid-baltic .baltic-bottom-row .baltic-left-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .photo-grid-baltic .baltic-bottom-row .baltic-left-col .photo-slot {
+      flex: 1;
+      aspect-ratio: unset;
+    }
+
+    .photo-grid-baltic .baltic-bottom-row .baltic-portrait {
+      flex-shrink: 0;
+      width: 270px;
+    }
+
+    .photo-grid-baltic .baltic-bottom-row .baltic-portrait .photo-slot {
+      height: 100%;
+      aspect-ratio: unset;
+    }
+
     /* ─── Placeholder card expanded state ──────────────────────────────── */
     .placeholder-body {
       display: none;
@@ -780,6 +817,11 @@
       .planb-top-row .photo-slot { height: 240px; }
       .planb-bottom-row { flex-direction: column; height: auto; }
       .planb-bottom-row .photo-slot { height: 200px; }
+
+      .baltic-bottom-row { flex-direction: column; height: auto; }
+      .baltic-bottom-row .baltic-left-col .photo-slot { height: 200px; }
+      .baltic-bottom-row .baltic-portrait { width: 100%; }
+      .baltic-bottom-row .baltic-portrait .photo-slot { height: 360px; }
 
       .prague-top-row { flex-direction: column; }
       .prague-bottom-row { flex-direction: column; height: auto; }
@@ -1250,6 +1292,16 @@
                 <p class="case-text"><strong>Flying Photo Booth</strong> — Takes and distributes photos triggered by Lightning payment.</p>
                 <p class="case-text"><strong>Ark-Powered Bar</strong> — BTCPay Server connected to an LND node integrated with Ark, with Boltz as the Lightning gateway. Anyone with a standard Lightning wallet could pay seamlessly, with no channel management required.</p>
                 <p class="case-text"><strong>Treasure Hunt Chest</strong> — BTCPay Server with password form, BitcoinSwitchFirmware, ESP32, 12V power supply, relay, and magnetic lock. Lightning-activated chest with a multi-location QR code puzzle across the venue.</p>
+
+                <div class="case-section-title" style="margin-top:28px;">Photos</div>
+                <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px;">
+                  <div class="photo-slot" style="height:220px;aspect-ratio:unset;">
+                    <img src="assets/images/11.webp" alt="Baltic Honeybadger">
+                  </div>
+                  <div class="photo-slot" style="height:220px;aspect-ratio:unset;">
+                    <img src="assets/images/10.webp" alt="Baltic Honeybadger">
+                  </div>
+                </div>
               </div>
               <div>
                 <div class="case-section-title">API Results</div>
@@ -1314,22 +1366,27 @@
                 </table>
 
                 <div class="case-section-title" style="margin-top:28px;">Photos</div>
-                <div class="photo-grid">
-                  <div class="photo-slot">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 19V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2zM8.5 13.5l2.5 3 3.5-4.5 4.5 6H5l3.5-4.5z"/></svg>
-                    Add photo
+                <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px;">
+                  <div class="photo-slot" style="height:220px;aspect-ratio:unset;">
+                    <img src="assets/images/12.webp" alt="Baltic Honeybadger">
                   </div>
-                  <div class="photo-slot">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 19V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2zM8.5 13.5l2.5 3 3.5-4.5 4.5 6H5l3.5-4.5z"/></svg>
-                    Add photo
+                  <div class="photo-slot" style="height:220px;aspect-ratio:unset;">
+                    <img src="assets/images/13.webp" alt="Baltic Honeybadger">
                   </div>
-                  <div class="photo-slot">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 19V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2zM8.5 13.5l2.5 3 3.5-4.5 4.5 6H5l3.5-4.5z"/></svg>
-                    Add photo
-                  </div>
-                  <div class="photo-slot">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 19V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2zM8.5 13.5l2.5 3 3.5-4.5 4.5 6H5l3.5-4.5z"/></svg>
-                    Add photo
+                  <div class="photo-grid-portrait">
+                    <div class="photo-col-images">
+                      <div class="photo-slot">
+                        <img src="assets/images/14.webp" alt="Baltic Honeybadger">
+                      </div>
+                      <div class="photo-slot">
+                        <img src="assets/images/15.webp" alt="Baltic Honeybadger">
+                      </div>
+                    </div>
+                    <div class="photo-col-video">
+                      <div class="photo-slot">
+                        <iframe src="https://www.youtube.com/embed/gKb74HiEbk8" title="Baltic Honeybadger" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
