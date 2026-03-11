@@ -634,11 +634,13 @@
 
     .photo-grid-prague .prague-tweet {
       flex: 1;
+      min-width: 0;
       background: #181818;
       border: 1px solid #222;
       border-radius: 6px;
       padding: 12px;
       box-sizing: border-box;
+      overflow: hidden;
     }
 
     .photo-grid-prague .prague-bottom-row {
@@ -833,6 +835,9 @@
       .baltic-bottom-row .baltic-portrait .photo-slot { height: 360px; }
 
       .prague-top-row { flex-direction: column; }
+      .prague-top-row .prague-tweet { width: 100%; box-sizing: border-box; overflow: hidden; }
+      .prague-top-row .prague-tweet iframe,
+      .prague-top-row .prague-tweet .twitter-tweet { max-width: 100% !important; width: 100% !important; }
       .prague-bottom-row { flex-direction: column; height: auto; }
       .prague-bottom-row .photo-slot { height: 200px; }
 
