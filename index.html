@@ -843,6 +843,33 @@
 
       .placeholder-photo-grid { grid-template-columns: 1fr; }
     }
+
+    .tutorials-section {
+      width: 1052px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 60px;
+      margin-bottom: 60px;
+      padding: 40px;
+      background: #0a0a0a;
+      border: 1px solid rgba(0,120,255,0.2);
+      border-radius: 10px;
+      transition: border-color 0.25s, box-shadow 0.25s;
+      cursor: default;
+    }
+
+    .tutorials-section:hover {
+      border-color: #0078ff;
+      box-shadow: rgba(0,120,255,0.6) 0px 0px 8px, rgba(0,120,255,0.3) 0px 0px 24px, rgba(0,120,255,0.12) 0px 0px 48px;
+    }
+
+    .tutorials-section .section-label {
+      color: #0078ff;
+    }
+
+    .tutorials-section a {
+      color: #0078ff;
+    }
   </style>
 </head>
 <body>
@@ -1728,7 +1755,7 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════ DEVICES -->
-  <section id="devices">
+  <section id="devices" class="tutorials-section">
     <div class="container">
       <div class="section-label">Open Source Tutorials</div>
       <div class="section-title">Build Your Own Lightning Device</div>
