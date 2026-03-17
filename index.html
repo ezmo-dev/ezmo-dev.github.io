@@ -861,6 +861,13 @@
             </svg>
             github.com/ezmo-dev
           </a>
+          <a href="https://x.com/ezmodev" class="hero-link" target="_blank" rel="noopener">
+            <!-- X (Twitter) icon -->
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.257 5.636 5.907-5.636zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+            @ezmodev
+          </a>
         </div>
       </div>
     </div>
@@ -1800,6 +1807,14 @@
             github.com/ezmo-dev
           </a>
         </div>
+        <div>
+          <a href="https://x.com/ezmodev" class="hero-link" target="_blank" rel="noopener" style="display:inline-flex;">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:16px;height:16px;fill:currentColor;">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.257 5.636 5.907-5.636zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+            @ezmodev
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -1845,6 +1860,45 @@
       });
     });
   </script>
+
+<script>
+(function() {
+  const canvas = document.createElement('canvas');
+  canvas.id = 'starfield';
+  canvas.style.cssText = 'position:absolute;top:0;left:0;width:100%;pointer-events:none;z-index:0;';
+  document.body.style.position = 'relative';
+  document.body.prepend(canvas);
+
+  const style = document.createElement('style');
+  style.textContent = 'body > *:not(#starfield) { position: relative; z-index: 1; }';
+  document.head.appendChild(style);
+
+  function draw() {
+    const pageHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+    canvas.width = window.innerWidth;
+    canvas.height = pageHeight;
+    canvas.style.height = pageHeight + 'px';
+
+    const ctx = canvas.getContext('2d');
+    const count = Math.floor(pageHeight / 3);
+
+    for (let i = 0; i < count; i++) {
+      const x = Math.random() * canvas.width;
+      const y = Math.random() * canvas.height;
+      const rand = Math.random();
+      const size = rand > 0.95 ? 3 : rand > 0.80 ? 2 : 1.5;
+      const opacity = 0.4 + Math.random() * 0.6;
+      ctx.beginPath();
+      ctx.arc(x, y, size / 2, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,' + opacity + ')';
+      ctx.fill();
+    }
+  }
+
+  window.addEventListener('load', draw);
+  window.addEventListener('resize', draw);
+})();
+</script>
 
 </body>
 </html>
