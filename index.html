@@ -1922,7 +1922,11 @@
     }
   }
 
-  window.addEventListener('load', draw);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', draw);
+  } else {
+    draw();
+  }
   window.addEventListener('resize', draw);
 })();
 </script>
