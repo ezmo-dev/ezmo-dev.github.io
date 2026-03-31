@@ -445,6 +445,24 @@
       color: #aaa;
     }
 
+    .partner-logos {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    .partner-logos img {
+      height: 36px;
+      width: auto;
+      transition: opacity 0.2s;
+    }
+
+    .partner-logos img:hover {
+      opacity: 0.8;
+    }
+
     /* Photo placeholders */
     .photo-grid {
       display: grid;
@@ -1248,12 +1266,12 @@
                 <p class="case-text"><strong>Smoke Machine</strong> — LNBits Instance + BitcoinSwitchFirmware + ESP32 & relay. Transparent case with exposed wiring, displayed as an educational booth installation.</p>
 
                 <div class="case-section-title" style="margin-top:28px;">Partners</div>
-                <div class="case-pills">
-                  <span class="case-pill">AmityAge</span>
-                  <span class="case-pill">JAN3</span>
-                  <span class="case-pill">BITKIT</span>
-                  <span class="case-pill">Cypherpunk Store</span>
+                <div class="partner-logos">
                   <span class="case-pill">RockstarDev</span>
+                  <img src="assets/logos/amityage-logo.png" alt="AmityAge">
+                  <img src="assets/logos/jan3-logo.png" alt="JAN3">
+                  <img src="assets/logos/bitkit-logo.png" alt="BITKIT">
+                  <img src="assets/logos/cypherpunk-store-logo.png" alt="Cypherpunk Store">
                 </div>
               </div>
               <div>
