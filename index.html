@@ -680,6 +680,42 @@
       gap: 8px;
     }
 
+    /* ─── Plan ₿ Forum El Salvador media grid ──────────────────────────── */
+    .sv-hw-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .photo-grid-sv {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .photo-grid-sv .sv-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .photo-grid-sv .sv-row .photo-slot {
+      height: 160px;
+      aspect-ratio: unset;
+    }
+
+    .photo-grid-sv .sv-tweet-wrap {
+      min-width: 0;
+      overflow: hidden;
+      background: #181818;
+      border: 1px solid #222;
+      border-radius: 6px;
+      padding: 12px;
+      box-sizing: border-box;
+    }
+
     /* ─── Devices ──────────────────────────────────────────────────────── */
     #devices {
       border-bottom: 1px solid var(--card-border);
@@ -860,6 +896,11 @@
       .prague-bottom-row .photo-slot { height: 200px; }
 
       .placeholder-photo-grid { grid-template-columns: 1fr; }
+
+      .sv-hw-grid { grid-template-columns: 1fr; }
+      .sv-hw-grid .photo-slot { height: 200px; }
+
+      .photo-grid-sv .sv-row { grid-template-columns: 1fr; }
 
       .tutorials-section {
         width: calc(100% - 32px);
@@ -1707,7 +1748,7 @@
                 <p class="case-text"><strong>Coconuts</strong> — Bitcoin point-of-sale running on the same BTCPay Server instance, serving as a live Lightning payment demonstration to attract visitors to the booth.</p>
                 <p class="case-text"><strong>Treasure Hunt</strong> — LNbits instance managing the redemption of 12 QR codes spread across the route, each revealing one seed word and the next clue. The pedestal box lock mechanism: ESP32 mini running custom C++ code, MOSFET transistor as relay, 12V to 5V power adapter, resistors, all assembled on a circuit board and housed in a custom 3D-printed enclosure, powered by a 12V battery triggering the electric magnetic lock at the final scan.</p>
 
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px;">
+                <div class="sv-hw-grid">
                   <div class="photo-slot" style="height:200px;aspect-ratio:unset;">
                     <img src="assets/images/26.webp" alt="Plan ₿ Forum El Salvador Hardware">
                   </div>
@@ -1749,27 +1790,32 @@
                 </table>
 
                 <div class="case-section-title" style="margin-top:28px;">Photos</div>
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px;">
-                  <div class="photo-slot" style="height:160px;aspect-ratio:unset;">
-                    <img src="assets/images/28.webp" alt="Plan ₿ Forum El Salvador">
+                <div class="photo-grid-sv">
+                  <div class="sv-row">
+                    <div class="photo-slot">
+                      <img src="assets/images/28.webp" alt="Plan ₿ Forum El Salvador">
+                    </div>
+                    <div class="photo-slot">
+                      <img src="assets/images/29.webp" alt="Plan ₿ Forum El Salvador">
+                    </div>
                   </div>
-                  <div class="photo-slot" style="height:160px;aspect-ratio:unset;">
-                    <img src="assets/images/29.webp" alt="Plan ₿ Forum El Salvador">
+                  <div class="sv-row">
+                    <div class="photo-slot">
+                      <img src="assets/images/30.webp" alt="Plan ₿ Forum El Salvador">
+                    </div>
+                    <div class="sv-tweet-wrap">
+                      <blockquote class="twitter-tweet" data-media-max-width="560"><p lang="en" dir="ltr">Game show to close Day 1 🎮<a href="https://twitter.com/JoeNakamoto?ref_src=twsrc%5Etfw">@JoeNakamoto</a> did a great job hosting!<br>Big energy, big cheers, big smiles were brought up from the audience and the participants.<br><br>What a way to end the day 🔥 <a href="https://t.co/q5IdgVgb8i">pic.twitter.com/q5IdgVgb8i</a></p>&mdash; Plan ₿ Network (@planb_network) <a href="https://twitter.com/planb_network/status/2017498185317450183?ref_src=twsrc%5Etfw">January 31, 2026</a></blockquote>
+                    </div>
                   </div>
-                  <div class="photo-slot" style="height:160px;aspect-ratio:unset;">
-                    <img src="assets/images/30.webp" alt="Plan ₿ Forum El Salvador">
+                  <div class="sv-row">
+                    <div class="sv-tweet-wrap">
+                      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">And we got some winners! 🎉 <a href="https://t.co/p9Cfwp37kw">pic.twitter.com/p9Cfwp37kw</a></p>&mdash; Plan ₿ Network (@planb_network) <a href="https://twitter.com/planb_network/status/2017369184720560193?ref_src=twsrc%5Etfw">January 30, 2026</a></blockquote>
+                    </div>
+                    <div class="sv-tweet-wrap">
+                      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Game show to close Day 1 🎮<a href="https://twitter.com/JoeNakamoto?ref_src=twsrc%5Etfw">@JoeNakamoto</a> did a great job hosting!<br>Big energy, big cheers, big smiles were brought up from the audience and the participants.<br><br>What a way to end the day 🔥 <a href="https://t.co/q5IdgVgb8i">pic.twitter.com/q5IdgVgb8i</a></p>&mdash; Plan ₿ Network (@planb_network) <a href="https://twitter.com/planb_network/status/2017498185317450183?ref_src=twsrc%5Etfw">January 31, 2026</a></blockquote>
+                    </div>
                   </div>
-                  <div style="display:flex;align-items:flex-start;">
-                    <blockquote class="twitter-tweet" data-media-max-width="560"><p lang="en" dir="ltr">Game show to close Day 1 🎮<a href="https://twitter.com/JoeNakamoto?ref_src=twsrc%5Etfw">@JoeNakamoto</a> did a great job hosting!<br>Big energy, big cheers, big smiles were brought up from the audience and the participants.<br><br>What a way to end the day 🔥 <a href="https://t.co/q5IdgVgb8i">pic.twitter.com/q5IdgVgb8i</a></p>&mdash; Plan ₿ Network (@planb_network) <a href="https://twitter.com/planb_network/status/2017498185317450183?ref_src=twsrc%5Etfw">January 31, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                  </div>
-                </div>
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px;">
-                  <div style="display:flex;align-items:flex-start;">
-                    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">And we got some winners! 🎉 <a href="https://t.co/p9Cfwp37kw">pic.twitter.com/p9Cfwp37kw</a></p>&mdash; Plan ₿ Network (@planb_network) <a href="https://twitter.com/planb_network/status/2017369184720560193?ref_src=twsrc%5Etfw">January 30, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                  </div>
-                  <div style="display:flex;align-items:flex-start;">
-                    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Game show to close Day 1 🎮<a href="https://twitter.com/JoeNakamoto?ref_src=twsrc%5Etfw">@JoeNakamoto</a> did a great job hosting!<br>Big energy, big cheers, big smiles were brought up from the audience and the participants.<br><br>What a way to end the day 🔥 <a href="https://t.co/q5IdgVgb8i">pic.twitter.com/q5IdgVgb8i</a></p>&mdash; Plan ₿ Network (@planb_network) <a href="https://twitter.com/planb_network/status/2017498185317450183?ref_src=twsrc%5Etfw">January 31, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                  </div>
+                  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
               </div>
             </div>
