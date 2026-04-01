@@ -217,7 +217,7 @@
       position: relative;
     }
 
-    .conf-card:hover {
+    .conf-card:hover, .conf-card:focus-visible {
       border-color: var(--orange);
       box-shadow: 0 0 8px rgba(247,147,26,0.6), 0 0 24px rgba(247,147,26,0.3), 0 0 48px rgba(247,147,26,0.12);
     }
@@ -276,7 +276,7 @@
       transition: color 0.25s, text-shadow 0.25s;
     }
 
-    .conf-card:hover .card-title {
+    .conf-card:hover .card-title, .conf-card:focus-visible .card-title {
       color: var(--orange);
       text-shadow: 0 0 8px rgba(247,147,26,0.5), 0 0 20px rgba(247,147,26,0.2);
     }
@@ -1004,7 +1004,7 @@
         <div class="cards-group">
 
         <!-- ──────────────────────────────── CARD 1: Adopting Bitcoin -->
-        <div class="conf-card" id="card-adopting-bitcoin" onclick="toggleCard(this)">
+        <div class="conf-card" tabindex="0" role="button" aria-expanded="false" id="card-adopting-bitcoin" onclick="toggleCard(this)">
           <div class="card-header">
             <div class="card-meta">
               <span class="card-date">Nov 2024</span>
@@ -1104,7 +1104,7 @@
         </div>
 
         <!-- ──────────────────────────────────── CARD 2: Plan ₿ Forum -->
-        <div class="conf-card" id="card-planb-forum" onclick="toggleCard(this)">
+        <div class="conf-card" tabindex="0" role="button" aria-expanded="false" id="card-planb-forum" onclick="toggleCard(this)">
           <div class="card-header">
             <div class="card-meta">
               <span class="card-date">Jan 2025</span>
@@ -1195,7 +1195,7 @@
         </div>
 
         <!-- ──────────────────────────── CARD 3: Plan ₿ Summer School -->
-        <div class="conf-card" id="card-planb-summer" onclick="toggleCard(this)">
+        <div class="conf-card" tabindex="0" role="button" aria-expanded="false" id="card-planb-summer" onclick="toggleCard(this)">
           <div class="card-header">
             <div class="card-meta">
               <span class="card-date">Summer 2025</span>
@@ -1271,7 +1271,7 @@
         <div class="cards-group">
 
         <!-- ──────────────────────────────────────── CARD 4: BTC Prague -->
-        <div class="conf-card" id="card-btc-prague" onclick="toggleCard(this)">
+        <div class="conf-card" tabindex="0" role="button" aria-expanded="false" id="card-btc-prague" onclick="toggleCard(this)">
           <div class="card-header">
             <div class="card-meta">
               <span class="card-date">Jun 2025</span>
@@ -1370,7 +1370,7 @@
         </div>
 
         <!-- ──────────────────────────── CARD 5: Baltic Honeybadger -->
-        <div class="conf-card" id="card-baltic-honeybadger" onclick="toggleCard(this)">
+        <div class="conf-card" tabindex="0" role="button" aria-expanded="false" id="card-baltic-honeybadger" onclick="toggleCard(this)">
           <div class="card-header">
             <div class="card-meta">
               <span class="card-date">Aug 9–10, 2025</span>
@@ -1519,7 +1519,7 @@
         </div>
 
         <!-- ───────────────────────────── CARD 6: Plan ₿ Forum -->
-        <div class="conf-card" id="card-plan-b-forum" onclick="toggleCard(this)">
+        <div class="conf-card" tabindex="0" role="button" aria-expanded="false" id="card-plan-b-forum" onclick="toggleCard(this)">
           <div class="card-header">
             <div class="card-meta">
               <span class="card-date">Oct 23–24, 2025</span>
@@ -1611,7 +1611,7 @@
         </div>
 
         <!-- ───────────────────────────── CARD 7: Democratic Decentralized Resistance -->
-        <div class="conf-card" id="card-ddr" onclick="toggleCard(this)">
+        <div class="conf-card" tabindex="0" role="button" aria-expanded="false" id="card-ddr" onclick="toggleCard(this)">
           <div class="card-header">
             <div class="card-meta">
               <span class="card-date">Nov 12, 2025</span>
@@ -1704,7 +1704,7 @@
         </div>
 
         <!-- ───────────────────────────── CARD 8: Plan ₿ Forum El Salvador -->
-        <div class="conf-card" id="card-plan-b-forum-sv" onclick="toggleCard(this)">
+        <div class="conf-card" tabindex="0" role="button" aria-expanded="false" id="card-plan-b-forum-sv" onclick="toggleCard(this)">
           <div class="card-header">
             <div class="card-meta">
               <span class="card-date">Jan 30–31, 2026</span>
@@ -1940,14 +1940,16 @@
   <!-- ══════════════════════════════════════════════════ JavaScript -->
   <script>
     function toggleCard(card) {
-      const wasOpen = card.classList.contains('is-open');
+      var wasOpen = card.classList.contains('is-open');
 
       document.querySelectorAll('.conf-card.is-open').forEach(function(c) {
         c.classList.remove('is-open');
+        c.setAttribute('aria-expanded', 'false');
       });
 
       if (!wasOpen) {
         card.classList.add('is-open');
+        card.setAttribute('aria-expanded', 'true');
 
         card.querySelectorAll('iframe[data-src]').forEach(function(iframe) {
           iframe.src = iframe.getAttribute('data-src');
@@ -1966,6 +1968,15 @@
     document.querySelectorAll('.card-body a, .placeholder-body a').forEach(function(link) {
       link.addEventListener('click', function(e) {
         e.stopPropagation();
+      });
+    });
+
+    document.querySelectorAll('.conf-card').forEach(function(card) {
+      card.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleCard(card);
+        }
       });
     });
   </script>
