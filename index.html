@@ -20,6 +20,7 @@
 
     /* ─── Reset ────────────────────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    h1, h2, h3, h4 { margin: 0; padding: 0; font-size: inherit; font-weight: inherit; line-height: inherit; }
     html { scroll-behavior: smooth; }
 
     body {
@@ -947,7 +948,7 @@
   <section id="hero">
     <div class="container">
       <div class="hero-inner">
-        <div class="hero-name">ez<span>mo</span></div>
+        <h1 class="hero-name">ez<span>mo</span></h1>
         <p class="hero-tagline">Bitcoin Lightning Hardware Developer and Educator</p>
         <div class="hero-links">
           <a href="https://github.com/ezmo-dev" class="hero-link" target="_blank" rel="noopener">
@@ -997,7 +998,7 @@
   <section id="case-studies">
     <div class="container">
       <div class="section-label">Field Reports</div>
-      <div class="section-title" id="deployments">Deployments</div>
+      <h2 class="section-title" id="deployments">Deployments</h2>
       <div class="cards-grid">
 
         <div class="cards-group">
@@ -1010,7 +1011,7 @@
               <span class="card-separator">·</span>
               <span class="card-location">San Salvador, El Salvador</span>
             </div>
-            <div class="card-title">Adopting Bitcoin After Party</div>
+            <h3 class="card-title">Adopting Bitcoin After Party</h3>
             <div class="card-stats">
               <div class="card-stat">
                 <div class="card-stat-value">254</div>
@@ -1042,11 +1043,11 @@
           <div class="card-body">
             <div class="card-body-inner">
               <div>
-                <div class="case-section-title">Overview</div>
+                <h4 class="case-section-title">Overview</h4>
                 <p class="case-text">After-party for the Adopting Bitcoin conference held at Edificio Morazan in San Salvador. Over 635 attendees experienced a fully Lightning-powered event featuring interactive hardware installations that accepted Bitcoin payments in real time.</p>
                 <p class="case-text">8 local artists participated. Lightning-powered catering generated over $5,000 in revenue. More than 200 Blink wallets were created on-site, and 120+ NFC cards were distributed.</p>
 
-                <div class="case-section-title" style="margin-top:28px;">Onboarding Stack</div>
+                <h4 class="case-section-title" style="margin-top:28px;">Onboarding Stack</h4>
                 <div class="case-pills">
                   <span class="case-pill">Bolt Cards (Tiankii Wallet)</span>
                   <span class="case-pill">Blink Wallet</span>
@@ -1054,7 +1055,7 @@
                   <span class="case-pill">Chivo Wallet</span>
                 </div>
 
-                <div class="case-section-title" style="margin-top:28px;">Hardware</div>
+                <h4 class="case-section-title" style="margin-top:28px;">Hardware</h4>
                 <p class="case-text"><strong>Smoke Machine</strong> — LNBits Instance + BitcoinSwitchFirmware + ESP32 & relay. Payments trigger a real smoke machine via Lightning.</p>
                 <p class="case-text"><strong>Treasure Hunt</strong> — Lightning hidden QR code concealed across the venue. Finding and paying it unlocks the reward.</p>
                 <p class="case-text"><strong>Candy Machine</strong> — LNBits Instance + BitcoinSwitchFirmware + ESP32 & relay. Dispenses candy on Lightning payment.</p>
@@ -1062,7 +1063,7 @@
                 <p class="case-text"><strong>LED Stage Control</strong> — ESP32 + LNBits Instance + BitcoinSwitchFirmware. Pay sats to change the color of the LED lighting on the DJ booth, giving the audience direct control over the stage scenography in real time.</p>
               </div>
               <div>
-                <div class="case-section-title">API Results</div>
+                <h4 class="case-section-title">API Results</h4>
                 <table class="case-table">
                   <thead>
                     <tr>
@@ -1081,7 +1082,7 @@
                   </tbody>
                 </table>
 
-                <div class="case-section-title" style="margin-top:28px;">Photos</div>
+                <h4 class="case-section-title" style="margin-top:28px;">Photos</h4>
                 <div class="photo-grid-portrait">
                   <div class="photo-col-video">
                     <div class="photo-slot">
@@ -1110,7 +1111,7 @@
               <span class="card-separator">·</span>
               <span class="card-location">San Salvador, El Salvador</span>
             </div>
-            <div class="card-title">Plan ₿ Forum</div>
+            <h3 class="card-title">Plan ₿ Forum</h3>
             <div class="card-stats">
               <div class="card-stat">
                 <div class="card-stat-value">405</div>
@@ -1137,18 +1138,18 @@
           <div class="card-body">
             <div class="card-body-inner">
               <div>
-                <div class="case-section-title">Overview</div>
+                <h4 class="case-section-title">Overview</h4>
                 <p class="case-text">Plan ₿ Forum at the Marte Museum in San Salvador. Deployed at the request of Plan ₿ Forum to provide multiple Lightning-activated installations across the venue. Building on lessons from the Adopting Bitcoin after party with new and upgraded devices.</p>
                 <p class="case-text">New installations included AI-powered generative visuals triggered by Lightning payments, displayed on a large LED panel on the main stage. Two giant lasers were positioned at the base of a large statue inside the museum, powerful enough to be seen from outside the venue. The lasers were also synchronized during a drone show. In collaboration with a Salvadorian company, a VJing setup projected Bitcoin-themed video montages on a large wall of the museum.</p>
 
-                <div class="case-section-title" style="margin-top:28px;">Hardware</div>
+                <h4 class="case-section-title" style="margin-top:28px;">Hardware</h4>
                 <p class="case-text"><strong>Smoke Machine</strong> — Upgraded iteration of the LNBits Instance + BitcoinSwitchFirmware + ESP32 & relay system.</p>
                 <p class="case-text"><strong>Prompt to VJing</strong> — TouchDesigner + StreamDiffusion + DMX controller. A Lightning payment sends a text prompt that generates real-time AI visuals projected at the event.</p>
                 <p class="case-text"><strong>Treasure Hunt</strong> — Lightning-activated lock: finding the 12 hidden QR codes around the venue and paying the last QR code on a treasure box unlocks a physical locker and wins the prizes.</p>
                 <p class="case-text"><strong>Laser DMX Controller</strong> — Laser lighting rig triggered and controlled via Lightning payments.</p>
               </div>
               <div>
-                <div class="case-section-title">API Results</div>
+                <h4 class="case-section-title">API Results</h4>
                 <table class="case-table">
                   <thead>
                     <tr>
@@ -1166,7 +1167,7 @@
                   </tbody>
                 </table>
 
-                <div class="case-section-title" style="margin-top:28px;">Photos</div>
+                <h4 class="case-section-title" style="margin-top:28px;">Photos</h4>
                 <div class="photo-grid-planb">
                   <div class="planb-top-row">
                     <div class="photo-slot">
@@ -1201,7 +1202,7 @@
               <span class="card-separator">·</span>
               <span class="card-location">Lugano, Switzerland</span>
             </div>
-            <div class="card-title">Plan ₿ Summer School</div>
+            <h3 class="card-title">Plan ₿ Summer School</h3>
             <div class="card-stats">
               <div class="card-stat">
                 <div class="card-stat-value">21</div>
@@ -1229,23 +1230,23 @@
           <div class="card-body">
             <div class="card-body-inner">
               <div>
-                <div class="case-section-title">Overview</div>
+                <h4 class="case-section-title">Overview</h4>
                 <p class="case-text">A week-long educational residency at PoW.Space in Lugano, Switzerland. The 21 students selected were the top performers from the Plan ₿ School, chosen for their results to attend this exclusive residency. The student curriculum included live lectures, hands-on building sessions, and a graduation ceremony. The event featured many guest speakers from the Bitcoin culture.</p>
                 <p class="case-text">Plan ₿ Studio was invited by PoW.Space to add an interactive Lightning layer to the residency, turning the venue into a live testing ground for Bitcoin-powered hardware. Students stress-tested Lightning-powered prototypes that turned payments into physical reactions, activating interactive artworks, lights, candy pill dispensers, a smoke machine, and a treasure hunt adapted to the venue. Those experiments demonstrated that Bitcoin technology becomes much more engaging when it leaves the screen and enters the real world.</p>
 
-                <div class="case-section-title" style="margin-top:28px;">Technical Stack Evolution</div>
+                <h4 class="case-section-title" style="margin-top:28px;">Technical Stack Evolution</h4>
                 <p class="case-text">The Summer School served as a live crash test in preparation for Baltic Honeybadger. Started with BTCPay Server connected to a Blink node. Under classroom load, Blink node response times caused 10-minute latency spikes. Root cause identified as Blink node slowness, not BTCPay. It was also the first real-world test of the BitcoinSwitch plugin on BTCPay Server, testing both simple GPIO triggering and password form activation.</p>
                 <p class="case-text">Migrated mid-week to LNbits, a familiar stack from previous deployments, which resolved the latency issues. The work continued after the Summer School during the preparation for Baltic Honeybadger. The final production stack connected BTCPay Server to an LND node integrated with Ark, with Boltz acting as the Lightning gateway, handling the bridge between incoming Lightning payments and the Ark environment. This allowed anyone with a standard Lightning wallet to pay seamlessly, with no channel management required.</p>
 
-                <div class="case-section-title" style="margin-top:28px;">BTCPay Server Plugin</div>
+                <h4 class="case-section-title" style="margin-top:28px;">BTCPay Server Plugin</h4>
                 <p class="case-text">First real-world deployment of the BitcoinSwitch plugin on BTCPay Server. The Summer School served as a live stress test for two activation modes: simple GPIO triggering for direct hardware control, and password form activation for the treasure hunt chest. Both modes were tested under real conditions with 21 students interacting simultaneously, providing valuable feedback for future deployments.</p>
 
-                <div class="case-section-title" style="margin-top:28px;">Treasure Hunt Format</div>
+                <h4 class="case-section-title" style="margin-top:28px;">Treasure Hunt Format</h4>
                 <p class="case-text">Each day, 3 QR codes were hidden across PoW.Space, each containing a hint and a question based on the previous day's lecture. The questions were designed in collaboration with the guest speakers who gave the live lectures. Players had to find the QR codes, answer the question correctly to receive a clue leading to the next one, and collect one keyword per day. The hunt reset every day at midday with new QR codes and new questions.</p>
                 <p class="case-text">Over the week, 12 keywords were collected to form a final passphrase. Decoding challenges including Caesar ciphers, ROT13/21, and SHA-256 hash puzzles were introduced as a first test to increase the difficulty of the treasure hunt format, building toward more complex deployments in future conferences.</p>
               </div>
               <div>
-                <div class="case-section-title">Hardware</div>
+                <h4 class="case-section-title">Hardware</h4>
                 <div class="case-pills" style="margin-top:8px;">
                   <span class="case-pill">Smoke Machine</span>
                   <span class="case-pill">Treasure Hunt</span>
@@ -1254,7 +1255,7 @@
                   <span class="case-pill">Lights</span>
                 </div>
 
-                <div class="case-section-title" style="margin-top:28px;">Photos</div>
+                <h4 class="case-section-title" style="margin-top:28px;">Photos</h4>
                 <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px;">
                   <img src="assets/images/7.webp" alt="Plan ₿ Summer School" style="width:100%;height:auto;display:block;border:1px solid #222;">
                   <img src="assets/images/8.webp" alt="Plan ₿ Summer School" style="width:100%;height:auto;display:block;border:1px solid #222;">
@@ -1277,7 +1278,7 @@
               <span class="card-separator">·</span>
               <span class="card-location">Prague, Czech Republic</span>
             </div>
-            <div class="card-title">BTC Prague</div>
+            <h3 class="card-title">BTC Prague</h3>
             <div class="card-stats">
               <div class="card-stat">
                 <div class="card-stat-value">185</div>
@@ -1302,21 +1303,21 @@
           <div class="card-body">
             <div class="card-body-inner">
               <div>
-                <div class="case-section-title">Overview</div>
+                <h4 class="case-section-title">Overview</h4>
                 <p class="case-text">First European deployment at BTC Prague. The flagship installation was a Pirate-themed Lightning Treasure Chest, a real pirate chest that emitted smoke and released a mechanical lock upon Lightning payment.</p>
                 <p class="case-text">The smoke machine was displayed on the Plan ₿ Network booth to attract people, and the hacked remote with the ESP32, relay and cables was placed in a transparent plastic box with exposed wiring as an educational exhibit.</p>
                 <p class="case-text">The smoke machine booth generated approximately $80 in revenue over the event days.</p>
 
-                <div class="case-section-title" style="margin-top:28px;">Treasure Hunt Format</div>
+                <h4 class="case-section-title" style="margin-top:28px;">Treasure Hunt Format</h4>
                 <p class="case-text">12 seed words were hidden across the venue and at partner booths, each with a Bitcoin trivia challenge about their company. Words were distributed to partners in sealed envelopes. Players had to follow the journey, find the hidden QR codes, and answer the trivia questions to continue and collect the 12 seed words.</p>
                 <p class="case-text">The final QR code was placed on the chest. Once scanned, players had to enter the 12 seed words found throughout the journey and make a Lightning payment to trigger the ESP32: the smoke machine fired, then the electric lock released.</p>
                 <p class="case-text">In collaboration with RockstarDev, 6 RockstarDev clones were placed around the venue, but only 3 carried the real password and trivia question, adding an extra layer of difficulty to the hunt.</p>
 
-                <div class="case-section-title" style="margin-top:28px;">Hardware</div>
+                <h4 class="case-section-title" style="margin-top:28px;">Hardware</h4>
                 <p class="case-text"><strong>Lightning Treasure Chest (Pirate theme)</strong> — BTCPay Server Instance with password form to unlock the chest, BitcoinSwitchFirmware, ESP32, 12V power supply, and 2 relays: one for the electric lock, one for the smoke machine remote.</p>
                 <p class="case-text"><strong>Smoke Machine</strong> — LNBits Instance + BitcoinSwitchFirmware + ESP32 & relay. Transparent case with exposed wiring, displayed as an educational booth installation.</p>
 
-                <div class="case-section-title" style="margin-top:28px;">Partners</div>
+                <h4 class="case-section-title" style="margin-top:28px;">Partners</h4>
                 <div class="partner-logos">
                   <span class="case-pill">RockstarDev</span>
                   <img src="assets/logos/amityage-logo.png" alt="AmityAge">
@@ -1326,7 +1327,7 @@
                 </div>
               </div>
               <div>
-                <div class="case-section-title">API Results (Day 1 + Day 2)</div>
+                <h4 class="case-section-title">API Results (Day 1 + Day 2)</h4>
                 <table class="case-table">
                   <thead>
                     <tr>
@@ -1343,7 +1344,7 @@
                 </table>
                 <p style="font-size:11px;color:#777777;margin-top:8px;">* Treasure Hunt: sats collected at each QR code. Net negative = uncompleted runs kept by the players.</p>
 
-                <div class="case-section-title" style="margin-top:28px;">Photos</div>
+                <h4 class="case-section-title" style="margin-top:28px;">Photos</h4>
                 <div class="photo-grid-prague">
                   <div class="prague-bottom-row">
                     <div class="photo-slot">
@@ -1376,7 +1377,7 @@
               <span class="card-separator">·</span>
               <span class="card-location">Riga, Latvia</span>
             </div>
-            <div class="card-title">Baltic Honeybadger</div>
+            <h3 class="card-title">Baltic Honeybadger</h3>
             <div class="card-stats">
               <div class="card-stat">
                 <div class="card-stat-value">206</div>
@@ -1404,19 +1405,19 @@
           <div class="card-body">
             <div class="card-body-inner">
               <div>
-                <div class="case-section-title">Overview</div>
+                <h4 class="case-section-title">Overview</h4>
                 <p class="case-text">Baltic Honeybadger in Riga was one of the largest deployments to date, split across two distinct parts.</p>
                 <p class="case-text">At the conference, Plan ₿ Studio designed and managed the Chill Zone, a dedicated space featuring a video game area and a book corner. A limited edition t-shirt collection designed under the Plan ₿ Studio brand was sold on-site. The Treasure Hunt QR codes were spread across the entire conference venue, with the final treasure chest placed in the Chill Zone. The hunt had 2 winners. The Workshop Stage hosted a live session, "IoT Powered by Lightning", a hands-on breakdown of the smoke machine from hardware to software, run in collaboration with a partner.</p>
                 <p class="case-text">The after party took place at Teritorija, an old abandoned factory, and featured the largest hardware lineup to date: a giant Honeybadger Head prop with laser eyes emitting smoke on Lightning payment, a Flying Photo Camera triggered by Lightning, and a smoke machine. The bar ran entirely on Ark-powered Bitcoin payments with no Lightning channel management required. After party performers included Rockamoto, Rolling Dynamite, Mark Kadek, and a fire show.</p>
 
-                <div class="case-section-title" style="margin-top:28px;">Hardware</div>
+                <h4 class="case-section-title" style="margin-top:28px;">Hardware</h4>
                 <p class="case-text"><strong>Giant Honeybadger Head</strong> — Oversized origami-style cardboard prop (1.5m long, 80cm tall) with laser eyes. A Lightning payment triggers the ESP32 via BTCPay Server connected to Ark, firing the smoke machine built inside the head simultaneously.</p>
                 <p class="case-text"><strong>Smoke Machine</strong> — BTCPay Server + BitcoinSwitchFirmware + ESP32 & relay.</p>
                 <p class="case-text"><strong>Flying Photo Camera</strong> — Takes and distributes photos triggered by Lightning payment.</p>
                 <p class="case-text"><strong>Ark-Powered Bar</strong> — BTCPay Server connected to an LND node integrated with Ark, with Boltz as the Lightning gateway. Anyone with a standard Lightning wallet could pay seamlessly, with no channel management required.</p>
                 <p class="case-text"><strong>Treasure Hunt Chest</strong> — BTCPay Server with password form, BitcoinSwitchFirmware, ESP32, 12V power supply, relay, and magnetic lock. Lightning-activated chest with a multi-location QR code puzzle across the venue.</p>
 
-                <div class="case-section-title" style="margin-top:28px;">Photos</div>
+                <h4 class="case-section-title" style="margin-top:28px;">Photos</h4>
                 <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px;">
                   <div class="photo-slot" style="height:220px;aspect-ratio:unset;">
                     <img src="assets/images/11.webp" alt="Baltic Honeybadger">
@@ -1427,7 +1428,7 @@
                 </div>
               </div>
               <div>
-                <div class="case-section-title">API Results</div>
+                <h4 class="case-section-title">API Results</h4>
                 <table class="case-table">
                   <colgroup>
                     <col style="width:60%">
@@ -1488,7 +1489,7 @@
                   </tbody>
                 </table>
 
-                <div class="case-section-title" style="margin-top:28px;">Photos</div>
+                <h4 class="case-section-title" style="margin-top:28px;">Photos</h4>
                 <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px;">
                   <div class="photo-slot" style="height:220px;aspect-ratio:unset;">
                     <img src="assets/images/12.webp" alt="Baltic Honeybadger">
@@ -1525,7 +1526,7 @@
               <span class="card-separator">·</span>
               <span class="card-location">Lugano, Switzerland</span>
             </div>
-            <div class="card-title">Plan ₿ Forum</div>
+            <h3 class="card-title">Plan ₿ Forum</h3>
             <div class="card-stats">
               <div class="card-stat">
                 <div class="card-stat-value">72</div>
@@ -1550,12 +1551,12 @@
           <div class="card-body">
             <div class="card-body-inner">
               <div>
-                <div class="case-section-title">Overview</div>
+                <h4 class="case-section-title">Overview</h4>
                 <p class="case-text">Plan ₿ Forum in Lugano was a two-part deployment across the P2P Stage and the Plan ₿ Network booth.</p>
                 <p class="case-text">Plan ₿ Network called on me to handle the technical production of the Game Show, hosted by Joe Nakamoto. The audience experience was fully Lightning-integrated: attendees could submit questions in real time through a BTCPay Server form, with submissions appearing on my screen backstage to select and push to the LED screen on stage. Slido was integrated into the presentation with scannable QR codes, allowing the audience to vote and compete alongside the guest teams on stage directly from their phones.</p>
                 <p class="case-text">At the Plan ₿ Network booth, a Candy Machine served as a live demonstration device, letting visitors discover how Lightning-activated hardware works in practice through a hands-on interaction.</p>
 
-                <div class="case-section-title" style="margin-top:28px;">Hardware</div>
+                <h4 class="case-section-title" style="margin-top:28px;">Hardware</h4>
                 <p class="case-text"><strong>Game Show</strong> — Full technical production including runsheet design, game creation, Slido integration, and BTCPay Server forms for real-time Lightning-powered audience questions.</p>
                 <p class="case-text"><strong>Candy Machines</strong> — BTCPay Server + BitcoinSwitchFirmware + ESP32 & relay. Housed in a custom 3D-printed enclosure with an exposed circuit board to demonstrate the internals to visitors.</p>
                 <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px;">
@@ -1568,7 +1569,7 @@
                 </div>
               </div>
               <div>
-                <div class="case-section-title">API Results</div>
+                <h4 class="case-section-title">API Results</h4>
                 <table class="case-table">
                   <colgroup>
                     <col style="width:60%">
@@ -1589,7 +1590,7 @@
                   </tbody>
                 </table>
 
-                <div class="case-section-title" style="margin-top:28px;">Photos</div>
+                <h4 class="case-section-title" style="margin-top:28px;">Photos</h4>
                 <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px;">
                   <div class="photo-slot" style="height:160px;aspect-ratio:unset;">
                     <img src="assets/images/16.webp" alt="Plan ₿ Forum Lugano">
@@ -1617,7 +1618,7 @@
               <span class="card-separator">·</span>
               <span class="card-location">Berlin, Germany</span>
             </div>
-            <div class="card-title">Democratic Decentralized Resistance</div>
+            <h3 class="card-title">Democratic Decentralized Resistance</h3>
             <div class="card-stats">
               <div class="card-stat">
                 <div class="card-stat-value">35</div>
@@ -1642,12 +1643,12 @@
           <div class="card-body">
             <div class="card-body-inner">
               <div>
-                <div class="case-section-title">Overview</div>
+                <h4 class="case-section-title">Overview</h4>
                 <p class="case-text">As part of Berlin Freedom Week, the Human Rights Foundation hosted an intimate gathering of around 60 guests on November 12 in collaboration with the World Liberty Congress. The format was intentionally informal, in the underground spirit of Berlin. The event centered on the intersection of human rights and decentralized technology, with speeches, round tables, and workshops throughout the day.</p>
                 <p class="case-text">The production covered venue selection, space planning, and full technical specifications. A live stream ran simultaneously on Nostr and YouTube. Two Candy Machines and a Smoke Machine were deployed to demonstrate Lightning payments to the audience in a playful, hands-on way.</p>
 
 
-                <div class="case-section-title" style="margin-top:28px;">Hardware</div>
+                <h4 class="case-section-title" style="margin-top:28px;">Hardware</h4>
                 <p class="case-text"><strong>Smoke Machine</strong> — LNbits Instance + BitcoinSwitchFirmware + ESP32 & relay</p>
                 <p class="case-text"><strong>Candy Machine</strong> — LNbits Instance + BitcoinSwitchFirmware + ESP32 & relay. The hardware is integrated inside the machine body, with a custom 3D-printed receptacle to receive and distribute the candy.</p>
 
@@ -1661,7 +1662,7 @@
                 </div>
               </div>
               <div>
-                <div class="case-section-title">API Results</div>
+                <h4 class="case-section-title">API Results</h4>
                 <table class="case-table">
                   <colgroup>
                     <col style="width:60%">
@@ -1682,7 +1683,7 @@
                   </tbody>
                 </table>
 
-                <div class="case-section-title" style="margin-top:28px;">Photos</div>
+                <h4 class="case-section-title" style="margin-top:28px;">Photos</h4>
                 <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px;">
                   <div class="photo-slot" style="height:160px;aspect-ratio:unset;">
                     <img src="assets/images/21.webp" alt="DDR">
@@ -1710,7 +1711,7 @@
               <span class="card-separator">·</span>
               <span class="card-location">San Salvador, El Salvador</span>
             </div>
-            <div class="card-title">Plan ₿ Forum</div>
+            <h3 class="card-title">Plan ₿ Forum</h3>
             <div class="card-stats">
               <div class="card-stat">
                 <div class="card-stat-value">194</div>
@@ -1736,14 +1737,14 @@
           <div class="card-body">
             <div class="card-body-inner">
               <div>
-                <div class="case-section-title">Overview</div>
+                <h4 class="case-section-title">Overview</h4>
                 <p class="case-text">Plan ₿ Forum 2026 in El Salvador was the largest and most complex deployment to date, built across three parallel tracks: the Plan ₿ Network Booth with its Lightning device, a Treasure Hunt spread across the venue with the participation of 5 sponsor booths, and the Game Show on the main outdoor stage.</p>
                 <p class="case-text">The Plan ₿ Network Booth was an evolved version of the previous format, with construction supervised and all finishing touches handled as space designer, in collaboration with Imagina Show, a local Salvadorian production company.</p>
                 <p class="case-text">The Treasure Hunt was a fully redesigned and more complex version of previous formats. The final pedestal box was custom fabricated in collaboration with Imagina Show following a complete manufacturing documentation produced personally. Players navigated a mixed route alternating between sponsor booths and hidden QR codes: each sponsor booth posed a question about their company, and a correct answer revealed a seed word and a clue leading to the next hidden QR code. The difficulty was significantly increased through harder questions and encrypted clues requiring decryption at certain steps of the route.</p>
                 <p class="case-text">The Game Show, hosted by Joe Nakamoto, was entirely rethought with a new format centered on live physical audience participation. All games were designed, the full runsheet written, and the sound managed live during the show.</p>
                 <p class="case-text">On-site coordination of the full Plan ₿ Network team was personally handled throughout the conference, including scheduling, planning, and making sure everything ran smoothly across all activations.</p>
 
-                <div class="case-section-title" style="margin-top:28px;">Hardware</div>
+                <h4 class="case-section-title" style="margin-top:28px;">Hardware</h4>
                 <p class="case-text"><strong>Bubble Machine</strong> — BTCPay Server + BitcoinSwitchFirmware + ESP32 running custom C++ code + 2 relays.</p>
                 <p class="case-text"><strong>Coconuts</strong> — Bitcoin point-of-sale running on the same BTCPay Server instance, serving as a live Lightning payment demonstration to attract visitors to the booth.</p>
                 <p class="case-text"><strong>Treasure Hunt</strong> — LNbits instance managing the redemption of 12 QR codes spread across the route, each revealing one seed word and the next clue. The pedestal box lock mechanism: ESP32 mini running custom C++ code, MOSFET transistor as relay, 12V to 5V power adapter, resistors, all assembled on a circuit board and housed in a custom 3D-printed enclosure, powered by a 12V battery triggering the electric magnetic lock at the final scan.</p>
@@ -1757,7 +1758,7 @@
                   </div>
                 </div>
 
-                <div class="case-section-title" style="margin-top:28px;">Partners</div>
+                <h4 class="case-section-title" style="margin-top:28px;">Partners</h4>
                 <div class="partner-logos">
                   <img src="assets/logos/bitkit-logo.png" alt="Bitkit">
                   <img src="assets/logos/keet-logo.png" alt="Keet">
@@ -1767,7 +1768,7 @@
                 </div>
               </div>
               <div>
-                <div class="case-section-title">API Results</div>
+                <h4 class="case-section-title">API Results</h4>
                 <table class="case-table">
                   <colgroup>
                     <col style="width:60%">
@@ -1789,7 +1790,7 @@
                   </tbody>
                 </table>
 
-                <div class="case-section-title" style="margin-top:28px;">Photos</div>
+                <h4 class="case-section-title" style="margin-top:28px;">Photos</h4>
                 <div class="photo-grid-sv">
                   <div class="sv-row">
                     <div class="photo-slot">
@@ -1832,7 +1833,7 @@
   <section id="devices" class="tutorials-section">
     <div class="container">
       <div class="section-label">Open Source Tutorials</div>
-      <div class="section-title">Build Your Own Lightning Device</div>
+      <h2 class="section-title">Build Your Own Lightning Device</h2>
       <div class="devices-grid">
 
         <!-- Smoke Machine -->
@@ -1894,7 +1895,7 @@
     <div class="container">
       <div class="contact-inner">
         <div class="section-label">Contact</div>
-        <div class="section-title">Get in Touch</div>
+        <h2 class="section-title">Get in Touch</h2>
         <p style="color: var(--muted); font-size: 15px; max-width: 480px;">
           Building open-source Lightning hardware for real-world Bitcoin adoption. Open to collaborations, events, and educational partnerships.
         </p>
