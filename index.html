@@ -2128,7 +2128,11 @@
   } else {
     draw();
   }
-  window.addEventListener('resize', draw);
+  var resizeTimeout;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(draw, 200);
+  });
 })();
 </script>
 
