@@ -1013,6 +1013,25 @@
       color: #4caf50;
     }
 
+    .lightning-inner {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .lightning-qr {
+      width: 100px;
+      height: 100px;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+
+    .lightning-right {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
     /* ─── Footer ───────────────────────────────────────────────────────── */
     footer {
       border-top: 1px solid var(--card-border);
@@ -2157,7 +2176,13 @@
               <span class="support-icon">⚡</span>
               Lightning Donation
             </div>
-            <!-- Lightning donation content goes here -->
+            <div class="lightning-inner">
+              <img src="assets/donation/donation-black-qr-code.webp" alt="Lightning donation QR code" class="lightning-qr">
+              <div class="lightning-right">
+                <p class="support-address">donation@btcpay.ezmo.dev</p>
+                <button class="copy-btn" onclick="copyAddress(this, 'donation@btcpay.ezmo.dev')">Copy address</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
