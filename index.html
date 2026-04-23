@@ -803,6 +803,13 @@
       color: var(--muted);
       font-size: 15px;
       max-width: 480px;
+      margin-bottom: 20px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
 
     .case-table-note {
@@ -921,11 +928,15 @@
     .contact-inner {
       display: flex;
       flex-direction: column;
-      gap: 22px;
+      gap: 0;
+    }
+
+    #contact .section-label {
+      margin-bottom: 28px;
     }
 
     #contact .section-title {
-      margin-bottom: 0;
+      margin-bottom: 6px;
     }
 
     /* ─── Support ─────────────────────────────────────────────────────── */
@@ -936,14 +947,22 @@
     .support-inner {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 0;
+    }
+
+    #support .section-label {
+      margin-bottom: 28px;
+    }
+
+    #support .section-title {
+      margin-bottom: 6px;
     }
 
     .support-subtitle {
       color: var(--muted);
       font-size: 15px;
       max-width: 520px;
-      margin-top: -36px;
+      margin-bottom: 28px;
     }
 
     .support-grid {
@@ -2137,25 +2156,27 @@
         <p class="contact-desc">
           Building open-source Lightning hardware for real-world Bitcoin adoption. Open to collaborations, events, and educational partnerships.
         </p>
-        <div>
-          <a href="mailto:ezmo1@protonmail.com" class="hero-link">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-            </svg>
-            ezmo1@protonmail.com
-          </a>
-        </div>
-        <div>
-          <a href="https://github.com/ezmo-dev" class="hero-link" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-github"/></svg>
-            github.com/ezmo-dev
-          </a>
-        </div>
-        <div>
-          <a href="https://x.com/ezmodev" class="hero-link" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-x"/></svg>
-            @ezmodev
-          </a>
+        <div class="contact-links">
+          <div>
+            <a href="mailto:ezmo1@protonmail.com" class="hero-link">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+              ezmo1@protonmail.com
+            </a>
+          </div>
+          <div>
+            <a href="https://github.com/ezmo-dev" class="hero-link" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-github"/></svg>
+              github.com/ezmo-dev
+            </a>
+          </div>
+          <div>
+            <a href="https://x.com/ezmodev" class="hero-link" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-x"/></svg>
+              @ezmodev
+            </a>
+          </div>
         </div>
       </div>
     </div>
