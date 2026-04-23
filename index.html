@@ -1185,6 +1185,197 @@
     .tutorials-section a {
       color: #0078ff;
     }
+
+    /* Header */
+    #site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: transparent;
+      border-bottom: 1px solid transparent;
+      transition: background 0.3s, border-color 0.3s, transform 0.3s;
+    }
+
+    #site-header.is-scrolled {
+      background: rgba(10, 10, 10, 0.55);
+      border-color: var(--card-border);
+      backdrop-filter: blur(32px);
+      -webkit-backdrop-filter: blur(32px);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .header-logo {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--text);
+      flex-shrink: 0;
+    }
+
+    .header-logo:hover {
+      color: var(--text);
+    }
+
+    .header-logo span {
+      color: var(--orange);
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .header-nav-link {
+      font-size: 14px;
+      color: var(--muted);
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: color 0.2s, background 0.2s;
+    }
+
+    a.header-nav-link:hover {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .header-nav-disabled {
+      opacity: 0.35;
+      cursor: default;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .coming-soon-badge {
+      font-size: 9px;
+      letter-spacing: 0.5px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--muted);
+      padding: 2px 5px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      background: transparent;
+      border: 1px solid var(--orange);
+      color: var(--orange);
+      font-size: 11px;
+      font-weight: 500;
+      border-radius: 6px;
+      transition: background 0.2s, color 0.2s;
+      flex-shrink: 0;
+    }
+
+    .header-cta:hover {
+      background: var(--orange);
+      color: #000;
+    }
+
+    .header-hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+      margin-left: auto;
+    }
+
+    .header-hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform 0.25s, opacity 0.25s;
+    }
+
+    .header-hamburger.is-open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .header-hamburger.is-open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .header-hamburger.is-open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .header-mobile-menu {
+      display: none;
+      flex-direction: column;
+      padding: 8px 24px 20px;
+      border-top: 1px solid var(--card-border);
+      background: rgba(10, 10, 10, 0.55);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .header-mobile-menu.is-open {
+      display: flex;
+    }
+
+    .header-mobile-link {
+      font-size: 15px;
+      color: var(--muted);
+      padding: 11px 0;
+      border-bottom: 1px solid var(--card-border);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    a.header-mobile-link:hover {
+      color: var(--text);
+    }
+
+    .header-mobile-link.header-nav-disabled {
+      border-bottom: none;
+    }
+
+    .header-mobile-cta {
+      margin-top: 16px;
+      justify-content: center;
+    }
+
+    /* Scroll offset for anchors, accounts for the fixed header height */
+    #deployments,
+    #tutorials,
+    #contact {
+      scroll-margin-top: 72px;
+    }
+
+    @media (max-width: 700px) {
+      .header-nav,
+      .header-cta {
+        display: none;
+      }
+      .header-hamburger {
+        display: flex;
+      }
+    }
   </style>
   <script type="application/ld+json">
   {
@@ -1226,6 +1417,33 @@
   </symbol>
 </svg>
 
+
+  <!-- HEADER -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a href="#hero" class="header-logo">ez<span>mo</span></a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="#deployments" class="header-nav-link">Deployments</a>
+        <a href="#tutorials" class="header-nav-link">Tutorials</a>
+        <a href="#contact" class="header-nav-link">Contact</a>
+        <!-- Shop, coming soon -->
+        <span class="header-nav-link header-nav-disabled" aria-hidden="true">Shop <span class="coming-soon-badge">soon</span></span>
+      </nav>
+      <a href="#contact" class="header-cta">Get in Touch</a>
+      <button class="header-hamburger" id="header-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="header-mobile-menu" id="mobile-menu" aria-hidden="true">
+      <a href="#deployments" class="header-mobile-link">Deployments</a>
+      <a href="#tutorials" class="header-mobile-link">Tutorials</a>
+      <a href="#contact" class="header-mobile-link">Contact</a>
+      <span class="header-mobile-link header-nav-disabled">Shop <span class="coming-soon-badge">soon</span></span>
+      <a href="#contact" class="header-cta header-mobile-cta">Get in Touch</a>
+    </div>
+  </header>
 
   <!-- ═══════════════════════════════════════════════════════════ HERO -->
   <section id="hero">
@@ -2290,7 +2508,7 @@
   document.body.prepend(canvas);
 
   const style = document.createElement('style');
-  style.textContent = 'body > *:not(#starfield) { position: relative; z-index: 1; }';
+  style.textContent = 'body > *:not(#starfield):not(#site-header) { position: relative; z-index: 1; }';
   document.head.appendChild(style);
 
   function draw() {
@@ -2329,5 +2547,61 @@
 </script>
 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<script>
+(function() {
+  var header = document.getElementById('site-header');
+  var hamburger = document.getElementById('header-hamburger');
+  var mobileMenu = document.getElementById('mobile-menu');
+  var lastScrollY = window.scrollY;
+  var ticking = false;
+
+  function updateHeader() {
+    var current = window.scrollY;
+
+    if (current > 20) {
+      header.classList.add('is-scrolled');
+    } else {
+      header.classList.remove('is-scrolled');
+    }
+
+    lastScrollY = current;
+    ticking = false;
+  }
+
+  function closeMobileMenu() {
+    mobileMenu.classList.remove('is-open');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    hamburger.classList.remove('is-open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }
+
+  function openMobileMenu() {
+    mobileMenu.classList.add('is-open');
+    mobileMenu.setAttribute('aria-hidden', 'false');
+    hamburger.classList.add('is-open');
+    hamburger.setAttribute('aria-expanded', 'true');
+  }
+
+  hamburger.addEventListener('click', function() {
+    if (mobileMenu.classList.contains('is-open')) {
+      closeMobileMenu();
+    } else {
+      openMobileMenu();
+    }
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', closeMobileMenu);
+  });
+
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      requestAnimationFrame(updateHeader);
+      ticking = true;
+    }
+  }, { passive: true });
+})();
+</script>
 </body>
 </html>
