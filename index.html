@@ -57,7 +57,7 @@
 
     /* ─── Hero ─────────────────────────────────────────────────────────── */
     #hero {
-      padding: 120px 0 48px;
+      padding: 80px 0 48px;
       border-bottom: 1px solid var(--card-border);
     }
 
@@ -67,29 +67,70 @@
       gap: 20px;
     }
 
-    .hero-name {
-      font-size: clamp(56px, 10vw, 96px);
-      font-weight: 700;
-      letter-spacing: -3px;
-      color: var(--text);
-      line-height: 1;
-    }
-
-    .hero-name span {
-      color: var(--orange);
-    }
-
     .hero-tagline {
       font-size: clamp(16px, 2.5vw, 20px);
-      color: var(--muted);
+      color: var(--orange);
       font-weight: 400;
       max-width: 560px;
     }
 
+    .hero-desc {
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 520px;
+      line-height: 1.7;
+      margin-top: -4px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+
+    .hero-cta-primary {
+      display: inline-flex;
+      align-items: center;
+      padding: 11px 24px;
+      background: var(--orange);
+      color: #000;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 6px;
+      border: 1px solid var(--orange);
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+
+    .hero-cta-primary:hover {
+      background: var(--orange-dim);
+      border-color: var(--orange-dim);
+      color: #000;
+      box-shadow: 0 0 16px rgba(247, 147, 26, 0.4);
+    }
+
+    .hero-cta-secondary {
+      display: inline-flex;
+      align-items: center;
+      padding: 11px 24px;
+      background: transparent;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 6px;
+      border: 1px solid var(--card-border);
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .hero-cta-secondary:hover {
+      border-color: var(--orange);
+      color: var(--orange);
+      box-shadow: 0 0 8px rgba(247, 147, 26, 0.6), 0 0 24px rgba(247, 147, 26, 0.3), 0 0 48px rgba(247, 147, 26, 0.12);
+    }
+
     .hero-links {
       display: flex;
-      gap: 16px;
-      margin-top: 8px;
+      gap: 10px;
       flex-wrap: wrap;
     }
 
@@ -1450,19 +1491,11 @@
   <section id="hero">
     <div class="container">
       <div class="hero-inner">
-        <h1 class="hero-name">ez<span>mo</span></h1>
         <p class="hero-tagline">Bitcoin Lightning Hardware Developer and Educator</p>
-        <div class="hero-links">
-          <a href="https://github.com/ezmo-dev" class="hero-link" target="_blank" rel="noopener">
-            <!-- GitHub icon -->
-            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-github"/></svg>
-            github.com/ezmo-dev
-          </a>
-          <a href="https://x.com/ezmodev" class="hero-link" target="_blank" rel="noopener">
-            <!-- X (Twitter) icon -->
-            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-x"/></svg>
-            @ezmodev
-          </a>
+        <p class="hero-desc">I build physical devices that react to Bitcoin Lightning payments and deploy them at conferences worldwide. Available for events, custom installations, and educational partnerships.</p>
+        <div class="hero-ctas">
+          <a href="#contact" class="hero-cta-primary">Get in Touch</a>
+          <a href="#deployments" class="hero-cta-secondary">See Deployments</a>
         </div>
       </div>
     </div>
@@ -2387,7 +2420,7 @@
           <div>
             <a href="https://github.com/ezmo-dev" class="hero-link" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-github"/></svg>
-              github.com/ezmo-dev
+              GitHub
             </a>
           </div>
           <div>
