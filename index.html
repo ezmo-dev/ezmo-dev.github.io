@@ -771,6 +771,12 @@
       aspect-ratio: unset;
     }
 
+    .photo-grid-sv .sv-col {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
     .photo-grid-sv .sv-tweet-wrap {
       min-width: 0;
       overflow: hidden;
@@ -839,6 +845,37 @@
     .tweet-align {
       display: flex;
       align-items: flex-start;
+    }
+
+    /* Screenshots to be placed in assets/tweets/ manually. */
+    .tweet-embed {
+      max-width: 550px;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .tweet-embed img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .tweet-embed figcaption {
+      padding: 8px 14px;
+      font-size: 12px;
+      border-top: 1px solid var(--card-border);
+    }
+
+    .tweet-embed figcaption a {
+      color: var(--muted);
+    }
+
+    .tweet-embed figcaption a:hover {
+      color: var(--orange);
     }
 
     .contact-desc {
@@ -1160,8 +1197,7 @@
 
       .prague-top-row { flex-direction: column; }
       .prague-top-row .prague-tweet { width: 100%; box-sizing: border-box; overflow: hidden; }
-      .prague-top-row .prague-tweet iframe,
-      .prague-top-row .prague-tweet .twitter-tweet { max-width: 100% !important; width: 100% !important; }
+      .prague-top-row .prague-tweet .tweet-embed { max-width: 100% !important; width: 100% !important; }
       .prague-bottom-row { flex-direction: column; height: auto; }
       .prague-bottom-row .photo-slot { height: 200px; }
 
@@ -1886,10 +1922,18 @@
                   </div>
                   <div class="prague-top-row">
                     <div class="prague-tweet">
-                      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Congratulations to <a href="https://twitter.com/mariusoffchain?ref_src=twsrc%5Etfw">@mariusoffchain</a> for solving the entire puzzle in record time! Thanks for documenting the entire process and for leaving prizes for the other hunters! <a href="https://t.co/j4eFT9icfq">https://t.co/j4eFT9icfq</a></p>&mdash; Plan ₿ Network (@planb_network) <a href="https://twitter.com/planb_network/status/1936714054149496896?ref_src=twsrc%5Etfw">June 22, 2025</a></blockquote>
+                      <!-- Screenshot to add: assets/tweets/tweet-planb-prague-winner.webp -->
+                      <figure class="tweet-embed">
+                        <img src="assets/tweets/tweet-planb-prague-winner.webp" alt="Tweet by Plan B Network: Congratulations to @mariusoffchain for solving the entire puzzle in record time" loading="lazy" width="550" height="auto">
+                        <figcaption><a href="https://twitter.com/planb_network/status/1936714054149496896" target="_blank" rel="noopener noreferrer">View on X</a></figcaption>
+                      </figure>
                     </div>
                     <div class="prague-tweet">
-                      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Rockstars are ready for <a href="https://twitter.com/planb_network?ref_src=twsrc%5Etfw">@planb_network</a> treasure hunt – find us at <a href="https://twitter.com/BTCPrague?ref_src=twsrc%5Etfw">@BTCPrague</a> this afternoon and we&#39;ll lead you to epic prizes ✊🗽 <a href="https://t.co/dXrfNomZIk">pic.twitter.com/dXrfNomZIk</a></p>&mdash; Uncle Rockstar Developer (@r0ckstardev) <a href="https://twitter.com/r0ckstardev/status/1935990973005267081?ref_src=twsrc%5Etfw">June 20, 2025</a></blockquote>
+                      <!-- Screenshot to add: assets/tweets/tweet-r0ckstardev-prague-treasure-hunt.webp -->
+                      <figure class="tweet-embed">
+                        <img src="assets/tweets/tweet-r0ckstardev-prague-treasure-hunt.webp" alt="Tweet by Uncle Rockstar Developer: Rockstars are ready for Plan B Network treasure hunt at BTC Prague" loading="lazy" width="550" height="auto">
+                        <figcaption><a href="https://twitter.com/r0ckstardev/status/1935990973005267081" target="_blank" rel="noopener noreferrer">View on X</a></figcaption>
+                      </figure>
                     </div>
                   </div>
                   
@@ -2128,7 +2172,11 @@
                     <img loading="lazy" decoding="async" src="assets/images/18.webp" alt="Participants during the game show on stage at Plan ₿ Forum Lugano" width="800" height="533">
                   </div>
                   <div class="tweet-align">
-                    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">🤹🍊The <a href="https://twitter.com/planb_network?ref_src=twsrc%5Etfw">@planb_network</a>&#39;s Game Show is happening now on the Mempool Stage! <br><br>🙌 Join <a href="https://twitter.com/JoeNakamoto?ref_src=twsrc%5Etfw">@JoeNakamoto</a>, <a href="https://twitter.com/dusan_matuska?ref_src=twsrc%5Etfw">@dusan_matuska</a>, <a href="https://twitter.com/efenigson?ref_src=twsrc%5Etfw">@efenigson</a>, <a href="https://twitter.com/lopp?ref_src=twsrc%5Etfw">@lopp</a> and all the crew to win some great prizes and learn more about Bitcoin! <a href="https://t.co/N0w5roYyGT">pic.twitter.com/N0w5roYyGT</a></p>&mdash; Lugano Plan ₿ (@LuganoPlanB) <a href="https://twitter.com/LuganoPlanB/status/1981680977895207031?ref_src=twsrc%5Etfw">October 24, 2025</a></blockquote> 
+                    <!-- Screenshot to add: assets/tweets/tweet-lugano-planb-game-show.webp -->
+                    <figure class="tweet-embed">
+                      <img src="assets/tweets/tweet-lugano-planb-game-show.webp" alt="Tweet by Lugano Plan B: The Plan B Network Game Show is happening now on the Mempool Stage" loading="lazy" width="550" height="auto">
+                      <figcaption><a href="https://twitter.com/LuganoPlanB/status/1981680977895207031" target="_blank" rel="noopener noreferrer">View on X</a></figcaption>
+                    </figure>
                   </div>
                 </div>
               </div>
@@ -2323,19 +2371,24 @@
                     </div>
                   </div>
                   <div class="sv-row">
-                    <div class="photo-slot">
-                      <img loading="lazy" decoding="async" src="assets/images/30.webp" alt="Main stage of the conference, featuring Joe Nakamoto's on-stage announcement of the Treasure Hunt atPlan ₿ Forum El Salvador" width="800" height="533">
+                    <div class="sv-col">
+                      <div class="photo-slot">
+                        <img loading="lazy" decoding="async" src="assets/images/30.webp" alt="Main stage of the conference, featuring Joe Nakamoto's on-stage announcement of the Treasure Hunt atPlan ₿ Forum El Salvador" width="800" height="533">
+                      </div>
+                      <div class="sv-tweet-wrap">
+                        <!-- Screenshot to add: assets/tweets/tweet-planb-sv-winners.webp -->
+                        <figure class="tweet-embed">
+                          <img src="assets/tweets/tweet-planb-sv-winners.webp" alt="Tweet by Plan B Network: And we got some winners!" loading="lazy" width="550" height="auto">
+                          <figcaption><a href="https://twitter.com/planb_network/status/2017369184720560193" target="_blank" rel="noopener noreferrer">View on X</a></figcaption>
+                        </figure>
+                      </div>
                     </div>
                     <div class="sv-tweet-wrap">
-                      <blockquote class="twitter-tweet" data-media-max-width="560"><p lang="en" dir="ltr">Game show to close Day 1 🎮<a href="https://twitter.com/JoeNakamoto?ref_src=twsrc%5Etfw">@JoeNakamoto</a> did a great job hosting!<br>Big energy, big cheers, big smiles were brought up from the audience and the participants.<br><br>What a way to end the day 🔥 <a href="https://t.co/q5IdgVgb8i">pic.twitter.com/q5IdgVgb8i</a></p>&mdash; Plan ₿ Network (@planb_network) <a href="https://twitter.com/planb_network/status/2017498185317450183?ref_src=twsrc%5Etfw">January 31, 2026</a></blockquote>
-                    </div>
-                  </div>
-                  <div class="sv-row">
-                    <div class="sv-tweet-wrap">
-                      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">And we got some winners! 🎉 <a href="https://t.co/p9Cfwp37kw">pic.twitter.com/p9Cfwp37kw</a></p>&mdash; Plan ₿ Network (@planb_network) <a href="https://twitter.com/planb_network/status/2017369184720560193?ref_src=twsrc%5Etfw">January 30, 2026</a></blockquote>
-                    </div>
-                    <div class="sv-tweet-wrap">
-                      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Game show to close Day 1 🎮<a href="https://twitter.com/JoeNakamoto?ref_src=twsrc%5Etfw">@JoeNakamoto</a> did a great job hosting!<br>Big energy, big cheers, big smiles were brought up from the audience and the participants.<br><br>What a way to end the day 🔥 <a href="https://t.co/q5IdgVgb8i">pic.twitter.com/q5IdgVgb8i</a></p>&mdash; Plan ₿ Network (@planb_network) <a href="https://twitter.com/planb_network/status/2017498185317450183?ref_src=twsrc%5Etfw">January 31, 2026</a></blockquote>
+                      <!-- Screenshot to add: assets/tweets/tweet-planb-sv-game-show-day1.webp -->
+                      <figure class="tweet-embed">
+                        <img src="assets/tweets/tweet-planb-sv-game-show-day1.webp" alt="Tweet by Plan B Network: Game show to close Day 1, Joe Nakamoto did a great job hosting" loading="lazy" width="550" height="auto">
+                        <figcaption><a href="https://twitter.com/planb_network/status/2017498185317450183" target="_blank" rel="noopener noreferrer">View on X</a></figcaption>
+                      </figure>
                     </div>
                   </div>
                   
@@ -2587,7 +2640,6 @@
 })();
 </script>
 
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <script>
 (function() {
