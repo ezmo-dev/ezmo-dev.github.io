@@ -67,6 +67,18 @@
       gap: 20px;
     }
 
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
     .hero-tagline {
       font-size: clamp(16px, 2.5vw, 20px);
       color: var(--orange);
@@ -1534,6 +1546,7 @@
   <section id="hero">
     <div class="container">
       <div class="hero-inner">
+        <h1 class="sr-only">ezmo</h1>
         <p class="hero-tagline">Bitcoin Lightning Hardware Developer and Educator</p>
         <p class="hero-desc">I build physical devices that react to Bitcoin Lightning payments and deploy them at conferences worldwide. Available for events, custom installations, and educational partnerships.</p>
         <div class="hero-ctas">
