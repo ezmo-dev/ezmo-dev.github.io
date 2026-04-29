@@ -1176,6 +1176,48 @@
       margin-bottom: 0;
     }
 
+    /* ─── Back to top ──────────────────────────────────────────────────── */
+    #back-to-top {
+      position: fixed;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%) translateY(8px);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(247, 147, 26, 0.07);
+      border: 1px solid rgba(247, 147, 26, 0.25);
+      color: var(--orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s, visibility 0.25s, transform 0.25s, background 0.2s;
+    }
+
+    #back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    #back-to-top:hover {
+      background: rgba(247, 147, 26, 0.18);
+    }
+
+    #back-to-top svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
     /* ─── Footer ───────────────────────────────────────────────────────── */
     footer {
       border-top: 1px solid var(--card-border);
@@ -2700,6 +2742,12 @@
     </div>
   </section>
 
+  <button id="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
   <!-- ══════════════════════════════════════════════════════ FOOTER -->
   <footer>
     <div class="container">
@@ -2712,6 +2760,16 @@
 
   <!-- ══════════════════════════════════════════════════ JavaScript -->
   <script>
+    (function () {
+      const btn = document.getElementById('back-to-top');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('visible', window.scrollY > 500);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
     function copyAddress(btn, address) {
       navigator.clipboard.writeText(address).then(() => {
         btn.textContent = 'Copied!';
